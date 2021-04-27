@@ -28,7 +28,7 @@ while len(filter(lambda cow: not(cow['done']), cowPoss)) > 0:
       foundEatenPositionsMatching = filter(lambda eatenPosition: eatenPosition['x'] == cowPoss[index]['x'] and eatenPosition['y'] == cowPoss[index]['y'], eatenPos)
       if len(foundEatenPositionsMatching) == 1:
         cowPoss[foundEatenPositionsMatching[0]['by']]['stopped'].append(index)
-        cowPoss[index]['stoppedBy'] = foundEatenPositionsMatching[0]['by']
+        cowPoss[foundEatenPositionsMatching[0]['by']]['stopped'].extend(cowPos['stopped'])
         cowPoss[index]['done'] = True
         continue
   overallDone = True
@@ -42,10 +42,6 @@ while len(filter(lambda cow: not(cow['done']), cowPoss)) > 0:
           overallDone = False
   if overallDone:
     break
-
-for cowPos in cowPoss:
-  if cowPos['done']:
-    cowPoss[cowPos['stoppedBy']]['stopped'].extend(cowPos['stopped'])
 
 for cowPos in cowPoss:
   print(len(cowPos['stopped']))
