@@ -1,4 +1,4 @@
-n = raw_input()
+n = int(raw_input())
 evenAndOddBreedIds = list(map(lambda num: num % 2 == 0, map(int, raw_input().split())))
 totalGroups = 0
 currentGroupType = True
