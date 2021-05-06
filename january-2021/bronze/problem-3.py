@@ -1,4 +1,4 @@
-n = raw_input()
+n = int(raw_input())
 heights = map(int, raw_input().split())
 maxHeights = map(int, raw_input().split())
 
