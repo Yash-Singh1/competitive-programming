@@ -36,12 +36,6 @@ content.forEach((outputs) => {
   outputs
     .filter((output) => output.length < 5)
     .forEach((output) => {
-      // signalState = Object.fromEntries(
-      //   Object.entries(signalState).map((entry) => [
-      //     entry[0],
-      //     output.includes(entry[0]) ? entry[1] : entry[1].filter((possibleSignal) => !output.includes(possibleSignal)),
-      //   ])
-      // );
       const chars = output.split('');
       chars.forEach((char) => {
         if (!signalState[char]) {
