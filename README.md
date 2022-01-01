@@ -1,3 +1,3 @@
-# usaco-practice
+# competitive-programming
 
-Some practice problem solving for preparing for the USACO
+My work for competitive programming.
