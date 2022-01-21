@@ -12,4 +12,4 @@ My work for competitive programming.
 | Hackerrank     | <https://www.hackerrank.com/>    | [`hackerrank`](./hackerrank)         |
 | AtCoder        | <https://atcoder.jp/>            | [`atcoder`](./atcoder)               |
 | Leetcode       | <https://leetcode.com/>          | [`leetcode`](./leetcode)             |
-| geeksforgeeks  | <https://www.geeksforgeeks.org/> | [`geeksforgeeks`](./geeksforgeeks)   |
+| GeeksforGeeks  | <https://www.geeksforgeeks.org/> | [`geeksforgeeks`](./geeksforgeeks)   |
