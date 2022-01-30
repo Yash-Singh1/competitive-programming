@@ -7,10 +7,10 @@ int main()
 {
   std::ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  int n;
+  int n {0};
   std::string s;
   cin >> n >> s;
-  long long ans {0};
+  unsigned long long ans {0};
   for (int i{0}; i < n; ++i)
   {
     int right {0};
