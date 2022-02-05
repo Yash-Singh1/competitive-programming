@@ -1,0 +1,23 @@
+12 10
+<a value = "GoodVal">
+<b value = "BadVal" size = "10">
+<c height = "auto">
+<d size = "3">
+<e strength = "200%">
+<f a1 = "1" a2 = "2" a3 = "3">
+</f>
+</e>
+</d>
+</c>
+</b>
+</a>
+a.b.c.d.e.f~a1
+a.b.f~a1
+a.b~size
+a.b.c.d.e.f~a2
+a.b.c.d.e.f~a3
+a.c~height
+a.b.d.e~strength
+a.b.c.d.e~strength
+d~sze
+a.b.c.d~size

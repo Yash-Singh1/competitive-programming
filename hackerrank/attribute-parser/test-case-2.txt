@@ -1,0 +1,11 @@
+6 4
+<a>
+<b name = "tag_one">
+<c name = "tag_two" value = "val_907">
+</c>
+</b>
+</a>
+a.b~name
+a.b.c~value
+a.b.c~src
+a.b.c.d~name
