@@ -1,0 +1,1 @@
+Doesn't work, timelimit exceeded + some mistakes while speed coding
