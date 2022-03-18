@@ -13,3 +13,4 @@ My work for competitive programming.
 | AtCoder        | <https://atcoder.jp/>            | [`atcoder`](./atcoder)               |
 | Leetcode       | <https://leetcode.com/>          | [`leetcode`](./leetcode)             |
 | GeeksforGeeks  | <https://www.geeksforgeeks.org/> | [`geeksforgeeks`](./geeksforgeeks)   |
+| Replit Discord | <https://replit.com/discord>     | [`replit-discord`](./replit-discord) |
