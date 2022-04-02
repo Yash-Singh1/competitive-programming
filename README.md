@@ -14,3 +14,4 @@ My work for competitive programming.
 | Leetcode       | <https://leetcode.com/>          | [`leetcode`](./leetcode)             |
 | GeeksforGeeks  | <https://www.geeksforgeeks.org/> | [`geeksforgeeks`](./geeksforgeeks)   |
 | Replit Discord | <https://replit.com/discord>     | [`replit-discord`](./replit-discord) |
+| TeamsCode      | <https://www.teamscode.org/>     | [`teamscode`](./teamscode)           |

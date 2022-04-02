@@ -1,0 +1,5 @@
+0 ≤ N ≤ X
+0 ≤ P ≤ Y
+Find all pairs N, P that satisfies above.
+N = 0, 1
+P = 0
