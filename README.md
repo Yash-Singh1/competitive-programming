@@ -15,3 +15,4 @@ My work for competitive programming.
 | GeeksforGeeks  | <https://www.geeksforgeeks.org/> | [`geeksforgeeks`](./geeksforgeeks)   |
 | Replit Discord | <https://replit.com/discord>     | [`replit-discord`](./replit-discord) |
 | TeamsCode      | <https://www.teamscode.org/>     | [`teamscode`](./teamscode)           |
+| CodeForces     | <https://codeforces.com/>        | [`codeforces`](./codeforces)         |
