@@ -16,3 +16,5 @@ My work for competitive programming.
 | Replit Discord | <https://replit.com/discord>     | [`replit-discord`](./replit-discord) |
 | TeamsCode      | <https://www.teamscode.org/>     | [`teamscode`](./teamscode)           |
 | CodeForces     | <https://codeforces.com/>        | [`codeforces`](./codeforces)         |
+| yosupo         | <https://judge.yosupo.jp/>       | [`yosupo`](./yosupo)                 |
+| CSES           | <https://cses.fi/>               | [`cses`](./cses)                     |
