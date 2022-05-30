@@ -18,3 +18,4 @@ My work for competitive programming.
 | CodeForces     | <https://codeforces.com/>        | [`codeforces`](./codeforces)         |
 | yosupo         | <https://judge.yosupo.jp/>       | [`yosupo`](./yosupo)                 |
 | CSES           | <https://cses.fi/>               | [`cses`](./cses)                     |
+| CodeChef       | <https://www.codechef.com/>      | [`codechef`](./codechef)
