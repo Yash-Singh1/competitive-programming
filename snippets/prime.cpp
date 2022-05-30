@@ -12,7 +12,8 @@ void sieve() {
     for (int i{2}; i < sqrt(N); ++i) {
         if (prime[i]) {
             ls.push_back(i);
-            for (int j{i * 2}; j < N; j += i) {
+            // Since all multiples between 2-i are already covered, we can safely start from i^2
+            for (int j{i * i}; j < N; j += i) {
                 prime[j] = 0;
             }
         }
