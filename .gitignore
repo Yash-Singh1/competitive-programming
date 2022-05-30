@@ -23,3 +23,6 @@ problem-4-3
 !problem-3/
 !problem-4/
 *.dSYM/
+
+# Competitive Companion
+.cph/
