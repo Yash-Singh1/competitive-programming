@@ -27,4 +27,4 @@ problem-4-3
 # Competitive Companion
 .cph/
 *.bin
-./*.cpp
+/*.cpp
