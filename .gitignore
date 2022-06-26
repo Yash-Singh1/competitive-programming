@@ -28,3 +28,6 @@ problem-4-3
 .cph/
 *.bin
 /*.cpp
+
+# Random Stuff
+screenshots/
