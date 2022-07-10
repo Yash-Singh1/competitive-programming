@@ -1,23 +1,18 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int deep{1};
-        unsigned long idx{(nums.size() - 1) / 2};
-        bool found {false};
-        while (!found && idx > 0 && idx < nums.size() - 1) {
-            if (nums[idx] > target) {
-                //if (idx != 0 && nums[idx - 1] < target) return -1;
-                idx -= (nums.size() - 1) / pow(2, deep);
-            } else if (nums[idx] < target) {
-                //if (idx != nums.size() - 1 && nums[idx + 1] > target) return -1;
-                idx += (nums.size() - 1) / pow(2, deep);
+        long long low{0};
+        long long high{static_cast<long long>(nums.size() - 1)};
+        while (low <= high) {
+            long long mid{(low + high) / 2};
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > target) {
+                high = mid - 1;
             } else {
-                found = true;
+                low = mid + 1;
             }
-            ++deep;
         }
-        if (found || nums[idx] == target)  return idx;
-        else if (idx < nums.size() - 1 && nums[idx + 1] == target) return idx + 1;
         return -1;
     }
 };
