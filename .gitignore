@@ -31,3 +31,7 @@ problem-4-3
 
 # Random Stuff
 screenshots/
+
+# File I/O
+*.in
+*.out
