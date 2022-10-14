@@ -1,7 +1,6 @@
-#include <iostream>
-#include <ios>
+#include <bits/stdc++.h>
 
-using std::cin;
+using namespace std;
 
 int main()
 {
@@ -12,24 +11,30 @@ int main()
 
   int b1x1{0}, b1y1{0}, b1x2{0}, b1y2{0}, b2x1{0}, b2y1{0}, b2x2{0}, b2y2{0};
   cin >> b1x1 >> b1y1 >> b1x2 >> b1y2 >> b2x1 >> b2y1 >> b2x2 >> b2y2;
-  int tarpX1{b1x1}, tarpY1{b1y1}, tarpX2{b1x2}, tarpY2{b1y2};
-  if (b2y1 <= b1y1 && b2y2 >= b1y2) {
-    // Covers one or more of the sides
-    tarpX1 = std::max(b1x1, b2x1);
-    tarpX2 = std::min(b1x2, b2x2);
+
+  if (b2x1 <= b1x1 && b2x2 >= b1x2 && b2y1 <= b1y1 && b2y2 >= b1y2) {
+    cout << 0 << "\n";
+  } else if (b2x2 < b1x1 || b2x1 > b1x2 || b2y1 > b1y2 || b2y2 < b1y1) {
+    cout << ((b1x2 - b1x1) * (b1y2 - b1y1)) << "\n";
+  } else {
+    // Trim behind backboard by same concept used in white sheet codeforces
+    b2x1 = max(b1x1, b2x1);
+    b2y1 = max(b1y1, b2y1);
+    b2x2 = min(b2x2, b1x2);
+    b2y2 = min(b2y2, b1y2);
+    if (b2x2 - b2x1 == b1x2 - b1x1) {
+      if (b1y1 == b2y1) {
+        b1y1 = b2y2;
+      } else if (b2y2 == b1y2) {
+        b1y2 = b2y1;
+      }
+    } else if (b2y2 - b2y1 == b1y2 - b1y1) {
+      if (b1x1 == b2x1) {
+        b1x1 = b2x2;
+      } else if (b1x2 == b2x2) {
+        b1x2 = b2x1;
+      }
+    }
+    cout << ((b1x2 - b1x1) * (b1y2 - b1y1)) << "\n";
   }
-  if (b2x1 <= b1x1 && b2x2 >= b1x2) {
-    // Covers the top or the bottom
-    tarpY1 = std::max(b1y1, b2y1);
-    tarpY2 = std::min(b1y2, b2y2);
-  }
-  int w{tarpX2 - tarpX1};
-  if (w <= 0) {
-    w = b1x2 - b1x1;
-  }
-  int h{tarpY2 - tarpY1};
-  if (h <= 0) {
-    h = b1y2 - b1y1;
-  }
-  std::cout << (tarpX2 - tarpX1) * (tarpY2 - tarpY1);
 }
