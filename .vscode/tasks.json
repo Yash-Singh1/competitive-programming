@@ -8,6 +8,8 @@
 			"args": [
 				"-Wall",
 				"-std=c++17",
+				"-Wextra",
+				"-O2",
 				"-fdiagnostics-color=always",
 				//"-g",
 				//"${fileDirname}/*.cpp",
