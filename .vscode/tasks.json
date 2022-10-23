@@ -11,7 +11,7 @@
 				"-Wextra",
 				"-O2",
 				"-fdiagnostics-color=always",
-				//"-g",
+				"-g",
 				//"${fileDirname}/*.cpp",
 				"${fileBasename}",
 				"-o",
