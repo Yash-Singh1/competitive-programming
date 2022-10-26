@@ -5,6 +5,9 @@ using namespace std;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
+  freopen("stacking.in", "r", stdin);
+  freopen("stacking.out", "w", stdout);
+
   int n, k;
   cin >> n >> k;
 
