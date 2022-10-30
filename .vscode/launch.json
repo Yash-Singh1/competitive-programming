@@ -26,13 +26,34 @@
       "miDebuggerPath": "/usr/bin/gdb"
     },
     {
+      "name": "g++ - Build and debug only active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++ build active file on Mac",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
       "type": "lldb",
       "request": "launch",
       "name": "Build and debug active file on Mac",
       "program": "${fileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "cwd": "${fileDirname}",
-      "preLaunchTask": "C/C++: g++ build active file"
+      "preLaunchTask": "C/C++: g++ build active file on Mac"
     }
   ]
 }

@@ -2,6 +2,8 @@
 
 using namespace std;
 
+typedef long long ll;
+
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
@@ -9,25 +11,22 @@ int main() {
   int x, n;
   cin >> x >> n;
 
-  set<pair<int, pair<int, int>>> pq;
-  set<pair<int, int>> s2;
-  s2.insert({0, x});
-  pq.insert({x, {0, x}});
-
-  for (int i{0}; i < n; ++i) {
-    int a;
-    cin >> a;
-    pair<int, int> lookup = {a, INT_MIN};
-    auto anstry = s2.lower_bound(lookup);
-    --anstry;
-    pq.erase({anstry->second - anstry->first, *anstry});
-    pq.insert({a - anstry->first, {anstry->first, a}});
-    pq.insert({anstry->second - a, {a, anstry->second}});
-    pair<int, int> ans = *anstry;
-    s2.insert(anstry, {ans.first, a});
-    s2.insert(++anstry, {a, ans.second});
-    s2.erase(ans);
-    cout << (--pq.end())->first << endl;
+  set<pair<ll,pair<ll,ll>>>s;
+  set<pair<ll,ll>>s2;
+  s.insert({x,{x,0LL}});
+  s2.insert({x,0LL});
+  while (n--) {
+    ll y;
+    cin >> y;
+    auto query = s2.lower_bound({y, LLONG_MIN});
+    pair<ll,ll> actual = *query;
+    s2.erase(query);
+    s2.insert({actual.first,y});
+    s2.insert({y,actual.second});
+    s.erase({actual.first-actual.second,actual});
+    s.insert({y-actual.second,{y,actual.second}});
+    s.insert({actual.first-y,{actual.first,y}});
+    cout << (s.rbegin())->first << "\n";
   }
 
   return 0;

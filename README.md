@@ -21,3 +21,4 @@ My work for competitive programming.
 | CodeChef       | <https://www.codechef.com/>                  | [`codechef`](./codechef)             |
 | LIT            | <https://lit.lhsmathcs.org/>                 | [`lit`](./lit)                       |
 | Google         | <https://codingcompetitions.withgoogle.com/> | [`google`](./google)                 |
+| oj.uz          | <https://oj.uz/>                             | [`ojuz`](./ojuz)                     |
