@@ -37,10 +37,11 @@
 				"-Wall",
 				"-std=c++17",
 				"-fdiagnostics-color=always",
+				"-O0",
 				"-g",
-				"${fileDirname}/*.cpp",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${fileDirname}/${fileBasenameNoExtension}",
+				"${fileDirname}/${fileBasename}"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

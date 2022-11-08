@@ -1,29 +1,37 @@
+// go1 is the first time I did it but that was like 6mo back so ima like do this again
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
 bool cmp(pair<int,int> a, pair<int,int> b) {
-    return a.second < b.second;
+  return a.second < b.second;
 }
 
 int main() {
-    int n;
-    cin >> n;
-    vector<pair<int,int>>v;
-    for (int i{0}; i <n;++i) {
-        int x, y;
-        cin >> x >> y;
-        pair<int,int>p = {x, y};
-        v.push_back(p);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n;
+  cin >> n;
+
+  pair<int,int>a[n];
+  for (int i{0}; i < n; ++i) {
+    cin >> a[i].first >> a[i].second;
+  }
+  sort(a,a+n,cmp);
+
+  int lststart{1};
+  int count{0};
+  for (int i{0}; i < n; ++i) {
+    if (a[i].first >= lststart) {
+      ++count;
+      lststart = a[i].second;
     }
-    sort(v.begin(), v.end(), cmp);
-    int c {1};
-    int ed{v[0].second};
-    for (int i{1}; i < n; ++i) {
-        if (v[i].first > ed) {
-            ed = v[i].second;
-            ++c;
-        }
-    }
-    std::cout << c;
+  }
+
+  cout << count << "\n";
+
+  return 0;
 }
+

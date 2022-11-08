@@ -6,26 +6,23 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  int n, x;
-  cin >> n >> x;
-
+  int n, q;
+  cin >> n >> q;
+  
   int a[n];
   for (int i{0}; i < n; ++i) {
     cin >> a[i];
   }
 
-  sort(a,a+n);
-
-  int tot{0}, sm{0};
-  while (sm < x && tot < n) {
-    sm += a[tot++];
+  for (int i{1}; i < n; ++i) {
+    a[i] ^= a[i-1];
   }
 
-  if (sm > x) {
-    --tot;
+  int x, y;
+  while (q--) {
+    cin >> x >> y;
+    cout << (a[y-1] ^ (x>1?a[x-2]:0)) << "\n";
   }
-
-  cout << tot << "\n";
 
   return 0;
 }
