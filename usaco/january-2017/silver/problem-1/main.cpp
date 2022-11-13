@@ -2,55 +2,59 @@
 
 using namespace std;
 
-int main()
-{
-  ofstream fout("hps.out");
-  ifstream fin("hps.in");
+int n, timemax;
+int d[100000];
 
-  int n;
-  fin >> n;
-  int a[n];
+bool validate(int k) {
+  priority_queue<int> stage;
+  for (int i{0}; i < k; ++i) {
+    stage.push(-d[i]);
+  }
+  priority_queue<int> waiting;
+  for (int i{k}; i < n; ++i) {
+    waiting.push(-i);
+  }
+  int fst{-stage.top()};
+  int lst{-stage.top()};
+  while (!stage.empty() || !waiting.empty()) {
+    lst = -stage.top();
+    stage.pop();
+    if (!waiting.empty()) {
+      // cout << k << " " << lst << " " << d[-waiting.top()] << " " << waiting.top() << "\n";
+      stage.push(-d[-waiting.top()] - lst);
+      waiting.pop();
+    }
+  }
+  // cout << lst << " " << fst << " " << k << "\n";
+  return lst <= timemax;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  freopen("cowdance.in", "r", stdin);
+  freopen("cowdance.out", "w", stdout);
+
+  cin >> n >> timemax;
 
   for (int i{0}; i < n; ++i) {
-    char x;
-    fin >> x;
-    if (x == 'H') {
-      a[i] = -1;
-    } else if (x == 'P') {
-      a[i] = 0;
+    cin >> d[i];
+  }
+
+  int l{1}, h{n};
+  int ans;
+  while (l <= h) {
+    int mid{(h + l) / 2};
+    if (validate(mid)) {
+      h = mid - 1;
+      ans = mid;
     } else {
-      a[i] = 1;
+      l = mid + 1;
     }
   }
 
-  int ans{-1};
-  int p[n];
-  int s[n];
-  for (int i{-1}; i < 2; ++i) {
-    for (int j{-1}; j < 2; ++j) {
-      if (i != j) {
-        for (int k{0}; k < n; ++k) {
-          if (a[k] == i) {
-            p[k] = 1;
-          } else {
-            p[k] = 0;
-          }
-          if (a[n - k - 1] == j) {
-            s[k] = 1;
-          } else {
-            s[k] = 0;
-          }
-        }
-        for (int k{1}; k < n; ++k) {
-          p[k] += p[k - 1];
-          s[k] += s[k - 1];
-        }
-        for (int k{0}; k < n - 1; ++k) {
-          ans = max(ans, p[k] + s[n - k - 1]);
-        }
-      }
-    }
-  }
+  cout << ans << "\n";
 
-  fout << ans << "\n";
+  return 0;
 }
