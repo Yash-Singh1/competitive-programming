@@ -1,5 +1,3 @@
-// Has some strict bipartite coloring possibility validation, so like 1/2 of the TCs fail
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,36 +5,55 @@ using namespace std;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
+
   int n, m;
   cin >> n >> m;
-  vector<int> a[n + 1];
+
+  int color[n];
+  for (int i{0}; i < n;++i) {
+    color[i] = -1;
+  }
+
+  vector<int> g[n];
+  int x, y;
   for (int i{0}; i < m; ++i) {
-    int x, y;
     cin >> x >> y;
-    a[x].push_back(y);
-    a[y].push_back(x);
+    --x; --y;
+    g[x].push_back(y);
+    g[y].push_back(x);
   }
-  int c[n + 1];
-  for (int i{1}; i <= n; ++i) {
-    c[i] = -1;
+
+  stack<int> s;
+  bool visited[n];
+  for (int i{0}; i < n; ++i) {
+    visited[i] = 0;
   }
-  for (int i{1}; i <= n; ++i) {
-    int cur{-1};
-    for (auto fr: a[i]) {
-        if (c[fr] != -1 && cur != -1 && c[fr] == cur) {
-            cout << "IMPOSSIBLE";
-            return 0;
-        } else if (c[fr] != -1 && cur == -1) {
-            cur = 3 - c[fr];
+  for (int j{0}; j < n; ++j) {
+    if (visited[j]) continue;
+    s.push(j);
+    color[j] = 0;
+    while (!s.empty()) {
+      int stop{s.top()};
+      s.pop();
+      visited[stop] = 1;
+      for (auto &ne: g[stop]) {
+        if (color[ne] == color[stop]) {
+          cout << "IMPOSSIBLE\n";
+          return 0;
+        } else if (color[ne] == -1) {
+          color[ne] = 1 - color[stop];
         }
-    }
-    if (cur == -1) {
-        c[i] = 1;
-    } else {
-        c[i] = cur;
+        if (!visited[ne]) {
+          s.push(ne);
+        }
+      }
     }
   }
-  for (int i{1}; i <= n; ++i) {
-    cout << c[i] << " ";
+
+  for (int i{0}; i < n; ++i) {
+    cout << (color[i]+1) << " ";
   }
+  cout << "\n";
+
+  return 0;
 }
