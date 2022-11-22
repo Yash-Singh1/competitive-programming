@@ -1,3 +1,5 @@
+// Got to use DSU to make it fast enough for USACO guide graders, I'll get back when I learn that
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,12 +9,13 @@ typedef long long ll;
 ll n;
 pair<ll,ll> a[1000];
 bool visited[1000];
+ll dist[1000][1000];
 
-ll comps(ll price) {
+inline ll comps(ll price) {
   vector<ll> g[n];
   for (ll i{0}; i < n; ++i) {
     for (ll j{0}; j < n; ++j) {
-      if ((pow(a[i].first - a[j].first, 2) + pow(a[i].second - a[j].second, 2)) <= price) {
+      if (dist[i][j] <= price) {
         g[i].push_back(j);
       }
     }
@@ -50,6 +53,11 @@ int main() {
   cin >> n;
   for (ll i{0}; i < n; ++i) {
     cin >> a[i].first >> a[i].second;
+  }
+  for (ll i{0}; i < n; ++i) {
+    for (ll j{0}; j < n; ++j) {
+      dist[i][j] = (pow(a[i].first - a[j].first, 2) + pow(a[i].second - a[j].second, 2));
+    }
   }
 
   ll l{0};

@@ -23,3 +23,4 @@ My work for competitive programming.
 | Google         | <https://codingcompetitions.withgoogle.com/> | [`google`](./google)                 |
 | oj.uz          | <https://oj.uz/>                             | [`ojuz`](./ojuz)                     |
 | CS Academy     | <https://csacademy.com/>                     | [`csacademy`](./csacademy)           |
+| ACSL           | <https://www.acsl.org/>                      | [`acsl`](./acsl)                     |
