@@ -1,38 +1,36 @@
 #include <bits/stdc++.h>
 
+typedef long long ll;
+
 using namespace std;
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  int n, x;
+  ll n, x;
   cin >> n >> x;
 
-  int low{0},high{0};
-
-  int a[n];
-  for (int i{0}; i < n; ++i) {
+  ll a[n];
+  for (ll i{0}; i < n; ++i) {
     cin >> a[i];
   }
 
-  for (int i{1}; i < n; ++i) {
-    a[i] += a[i - 1];
-  }
-  
-
-  int sms{0};
-  while (low < n) {
-    while (high < n && a[high] - (low == 0 ? 0 : a[low - 1]) < x) {
-      ++high;
+  ll l{0}, r{0}, sm{0};
+  ll tot{0};
+  while (l < n) {
+    while (r < n && sm < x) {
+      sm += a[r];
+      ++r;
     }
-    if (a[high] - (low == 0 ? 0 : a[low - 1]) == x) {
-      ++sms;
+    if (sm == x) {
+      ++tot;
     }
-    ++low;
+    sm -= a[l];
+    ++l;
   }
 
-  cout << sms;
+  cout << tot << "\n";
 
   return 0;
 }
