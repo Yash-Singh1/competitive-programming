@@ -25,3 +25,4 @@ My work for competitive programming.
 | CS Academy         | <https://csacademy.com/>                     | [`csacademy`](./csacademy)           |
 | ACSL               | <https://www.acsl.org/>                      | [`acsl`](./acsl)                     |
 | UVa (Online Judge) | <https://onlinejudge.org/>                   | [`uva`](./uva)                       |
+| DMOJ               | <https://dmoj.ca/>                           | [`dmoj`](./dmoj)                     |

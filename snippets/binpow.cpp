@@ -1,13 +1,21 @@
-// (a^b)%m;
-long long binpow(long long a,long long b,long long m){
-    a=a%m;
-    long long res=1;
-    while(b>0){
-        if(b%2==1){
-            res=res*a%m;
-        }
-        a=a*a%m;
-        b=b/2;
+ll binpow(ll a, ll b, ll m) {
+  if (b == 0) {
+    return 1;
+  } else if (a == 0) {
+    return 0;
+  }
+  ll curp{a};
+  ll pow{0};
+  ll ans{1};
+  while (b) {
+    if (b & (1<<pow)) {
+      b &= b - 1;
+      ans *= curp;
+      ans %= m;
     }
-    return res;
+    ++pow;
+    curp *= curp;
+    curp %= m;
+  }
+  return ans;
 }
