@@ -94,5 +94,7 @@
     "stack": "cpp"
   },
   "cph.general.defaultLanguage": "cpp",
-  "cph.language.cpp.Args": "-Wall -std=c++17 -fdiagnostics-color=always"
+  "cph.language.cpp.Args": "-Wall -std=c++17 -fdiagnostics-color=always",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true
 }
