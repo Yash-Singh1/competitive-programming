@@ -53,7 +53,7 @@
       "program": "${fileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "cwd": "${fileDirname}",
-      "preLaunchTask": "C/C++: g++ build active file on Mac"
+      "preLaunchTask": "C/C++: g++ build active file"
     }
   ]
 }
