@@ -27,4 +27,5 @@ My work for competitive programming.
 | UVa (Online Judge) | <https://onlinejudge.org/>                   | [`uva`](./uva)                       |
 | DMOJ               | <https://dmoj.ca/>                           | [`dmoj`](./dmoj)                     |
 | TopCoder           | <https://community.topcoder.com/>            | [`topcoder`](./topcoder)             |
+| POJ                | <http://poj.org/>                            | [`poj`](./poj)                       |
 | Other              | _Miscellaneous_                              | [`practice`](./practice)             |

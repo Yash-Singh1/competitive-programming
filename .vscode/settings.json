@@ -91,7 +91,8 @@
     "__tuple": "cpp",
     "ios": "cpp",
     "locale": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "queue": "cpp"
   },
   "cph.general.defaultLanguage": "cpp",
   "cph.language.cpp.Args": "-Wall -std=c++17 -fdiagnostics-color=always",

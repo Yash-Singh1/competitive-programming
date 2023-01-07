@@ -1,5 +1,21 @@
 TODO: Move snippets to someplace else to make more accessible
 
+## Catalog
+
+| Name                   | Description                                                                  | File                                                      | Source                                                            |
+| ---------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- |
+| BFS Shortest Path      | Returns the SSSP on an unweighted graph using BFS in $O(V+E)$                | [`bfs_shortest.cpp`](./bfs_shortest.cpp)                  | -                                                                 |
+| Binary Search          | Basic binary search template $O(log_2 n)$                                    | [`binary-search.cpp`](./binary-search.cpp)                | -                                                                 |
+| Binary Exponentiation  | Allows you to exponentiate in $O(alog_2 (b))$. Can be used with `mulpow.cpp` | [`binpow.cpp`](./binpow.cpp)                              | -                                                                 |
+| Iterative DFS          | Depth First Search implemented iteratively, $O(V+E)$                         | [`dfs_iterative.cpp`](./dfs_iterative.cpp)                | -                                                                 |
+| Factorial              | Iterative factorial with memoization in $O(n)$                               | [`factorial.cpp`](./factorial.cpp)                        | -                                                                 |
+| LCS                    | Longest Common Subsequence tabulated with iterative DP in $O(nm)$            | [`lcs-tabulated.cpp`](./lcs-tabulated.cpp)                | -                                                                 |
+| Modular Multiplication | modular multiplication for mods $>=10^9$ in $O(a\log_2(b))$                  | [`mulmod.cpp`](./mulmod.cpp)                              | GeeksForGeeks                                                     |
+| Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph  | _TODO_ ([Cooperative Game](../codeforces/1137D/main.cpp)) | -                                                                 |
+| Sieve of Eratosthenes  | Calculates which numbers are prime and which are not in $O(n\log_2(n))$      | [`prime.cpp`](./prime.cpp)                                | -                                                                 |
+| Linear Sieve           | Calculates which numbers are prime using optimizations in $O(n)$             | [`linear_sieve.cpp`](./linear_sieve.cpp)                  | [Nisiyama_Suzune's blog](https://codeforces.com/blog/entry/54090) |
+| GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$         | [`gcd.cpp`](./gcd.cpp)                                    | USACO Guide                                                       |
+
 ## Personal Choices in Starter Template
 
 These are a few suggestions for starter templates and their explanations.

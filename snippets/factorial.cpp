@@ -1,21 +1,8 @@
-map<int, int> facts;
+// Calculating factorial in one go and memoizing it is much more reasonable than having a function calculate it lazily
 
-int fact(int n) {
-    int storen {n};
-    if (facts.find(n) != facts.end()) {
-        return facts[n];
-    }
-    int res = 1;
-    while (n > 1) {
-        if (facts.find(n) != facts.end()) {
-            res *= facts[n];
-            res %= MOD;
-            break;
-        }
-        res *= n;
-        res %= MOD;
-        --n;
-    }
-    facts[storen] = res;
-    return res;
+vector<int> facts(MAX_N, -1);
+facts[0] = 1;
+
+for (int i{1}; i <= MAX_N; ++i) {
+  facts[i] = (facts[i - 1] * i) % MOD;
 }
