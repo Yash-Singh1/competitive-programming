@@ -15,6 +15,7 @@ TODO: Move snippets to someplace else to make more accessible
 | Sieve of Eratosthenes  | Calculates which numbers are prime and which are not in $O(n\log_2(n))$      | [`prime.cpp`](./prime.cpp)                                | -                                                                 |
 | Linear Sieve           | Calculates which numbers are prime using optimizations in $O(n)$             | [`linear_sieve.cpp`](./linear_sieve.cpp)                  | [Nisiyama_Suzune's blog](https://codeforces.com/blog/entry/54090) |
 | GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$         | [`gcd.cpp`](./gcd.cpp)                                    | USACO Guide                                                       |
+| Rolling Hash           | Rolling Polynomial hash prefix sum calculation in $O(n)$                     | [`rolling_hash.cpp`](./rolling_hash.cpp)                  | -                                                                 |
 
 ## Personal Choices in Starter Template
 
