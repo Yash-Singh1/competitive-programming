@@ -4,8 +4,8 @@ TODO: Move snippets to someplace else to make more accessible
 
 | Name                   | Description                                                                  | File                                                      | Source                                                            |
 | ---------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- |
-| BFS Shortest Path      | Returns the SSSP on an unweighted graph using BFS in $O(V+E)$                | [`bfs_shortest.cpp`](./bfs_shortest.cpp)                  | -                                                                 |
-| Binary Search          | Basic binary search template $O(log_2 n)$                                    | [`binary-search.cpp`](./binary-search.cpp)                | -                                                                 |
+| BFS Shortest Path      | Returns the SSSP on an unweighted graph using BFS in $O(V+E)$                | [`bfs_shortest`](./bfs_shortest)                          | -                                                                 |
+| Binary Search          | Basic binary search template $O(log_2 n)$                                    | [`binary-search`](./binary-search)                        | -                                                                 |
 | Binary Exponentiation  | Allows you to exponentiate in $O(alog_2 (b))$. Can be used with `mulpow.cpp` | [`binpow.cpp`](./binpow.cpp)                              | -                                                                 |
 | Iterative DFS          | Depth First Search implemented iteratively, $O(V+E)$                         | [`dfs_iterative.cpp`](./dfs_iterative.cpp)                | -                                                                 |
 | Factorial              | Iterative factorial with memoization in $O(n)$                               | [`factorial.cpp`](./factorial.cpp)                        | -                                                                 |
@@ -16,6 +16,7 @@ TODO: Move snippets to someplace else to make more accessible
 | Linear Sieve           | Calculates which numbers are prime using optimizations in $O(n)$             | [`linear_sieve.cpp`](./linear_sieve.cpp)                  | [Nisiyama_Suzune's blog](https://codeforces.com/blog/entry/54090) |
 | GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$         | [`gcd.cpp`](./gcd.cpp)                                    | USACO Guide                                                       |
 | Rolling Hash           | Rolling Polynomial hash prefix sum calculation in $O(n)$                     | [`rolling_hash.cpp`](./rolling_hash.cpp)                  | -                                                                 |
+| Fenwick Tree           | Fenwick Tree, or BIT (Binary Index Tree) for efficient RSQ                   | [`fenwick_tree`](./fenwick_tree)                          | CP4                                                               |
 
 ## Personal Choices in Starter Template
 
