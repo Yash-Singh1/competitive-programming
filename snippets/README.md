@@ -17,6 +17,7 @@ TODO: Move snippets to someplace else to make more accessible
 | GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$         | [`gcd.cpp`](./gcd.cpp)                                    | USACO Guide                                                       |
 | Rolling Hash           | Rolling Polynomial hash prefix sum calculation in $O(n)$                     | [`rolling_hash.cpp`](./rolling_hash.cpp)                  | -                                                                 |
 | Fenwick Tree           | Fenwick Tree, or BIT (Binary Index Tree) for efficient RSQ                   | [`fenwick_tree`](./fenwick_tree)                          | CP4                                                               |
+| DSU                    | Disjoint Set Union, Data Structure representing graph components             | [`dsu`](./dsu)                                            | LeetCode/KACTL                                                    |
 
 ## Personal Choices in Starter Template
 
