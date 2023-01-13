@@ -21,3 +21,7 @@ Since we have to calculate the $\log_2{b}$ segments, the time complexity is $O(\
 ## Snippet
 
 At [`binpow.cpp`](./binpow.cpp), you can find my implementation of binary exponentiation.
+
+## Fermat's Little Theorem
+
+Fermat's Little Theorem is a theorem for working with modular division. It states that if we aer working with $\mod p$ where $p$ is a prime number, there exists for each $a$ that is a part of $\mod p$, an inverse $a^-1$ such that $a\cdot a^{-1}\equiv 1\pmod{p}$, where $a^{-1}\equiv a^{p-2}\pmod{p}$. This can be useful for example when evaluating the combinatorics formula $\mod p$, because we can simply calculate the numerator $\mod p$ and then multiply that by the inverse of the denominator $\mod p$. That will give us the equivalent of calculating the whole thing $\mod p$. Binary exponentiation comes in handy in this case because $p$ can be very large, and we can use binary exponentiation to calculate the exponent efficiently.

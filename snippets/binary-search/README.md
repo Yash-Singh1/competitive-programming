@@ -51,6 +51,8 @@ C++ has several builtin functions to leverage binary search to search sorted con
 
 - `lower_bound` - `lower_bound` works similarly to `upper_bound`, however it searches for a value that is $\ge$ to the given value.
 
+You can also see some binary search snippets of lower bound and upper bound respectively, [`lower-bound.cpp`](./lower-bound.cpp) and [`upper-bound.cpp`](./upper-bound.cpp).
+
 ## Data Structures using Binary Search Based Techniques
 
 Although, you don't need to be too aware of how they work internally, there are some non-linear data structures such as `set` and `map` that automatically sort the elements on insertion. Internally they make use of a data structure known as the binary search tree that is based on the principles of binary search.
