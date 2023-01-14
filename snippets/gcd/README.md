@@ -26,7 +26,7 @@ gcd(b, a\mod b) & b\neq 0
 \end{cases}
 $$
 
-You can see the code for the Euclidean algorithm in the [gcd.cpp](./gcd.cpp) file.
+You can see the code for the Euclidean algorithm in the [gcd.cpp](./gcd.cpp) file (brought from USACO Guide).
 
 ## Builtin Functions
 

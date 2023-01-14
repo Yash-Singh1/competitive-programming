@@ -2,22 +2,22 @@ TODO: Move snippets to someplace else to make more accessible
 
 ## Catalog
 
-| Name                   | Description                                                                 | File                                                      | Source                                                            |
-| ---------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- |
-| BFS Shortest Path      | Returns the SSSP on an unweighted graph using BFS in $O(V+E)$               | [`bfs_shortest`](./bfs_shortest)                          | -                                                                 |
-| Binary Search          | Basic binary search template $O(\log_2{n})$                                 | [`binary-search`](./binary-search)                        | -                                                                 |
-| Binary Exponentiation  | Allows you to exponentiate in $O(\log_2{b})$. Can be used with `mulpow.cpp` | [`binpow`](./binpow)                                      | -                                                                 |
-| DFS                    | Depth First Search, $O(V+E)$                                                | [`dfs`](./dfs)                                            | -                                                                 |
-| Factorial              | Iterative factorial with memoization in $O(n)$                              | [`factorial.cpp`](./factorial.cpp)                        | -                                                                 |
-| LCS                    | Longest Common Subsequence tabulated with iterative DP in $O(nm)$           | [`lcs-tabulated.cpp`](./lcs-tabulated.cpp)                | -                                                                 |
-| Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | [`mulmod.cpp`](./mulmod.cpp)                              | GeeksForGeeks                                                     |
-| Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph | _TODO_ ([Cooperative Game](../codeforces/1137D/main.cpp)) | -                                                                 |
-| Sieve of Eratosthenes  | Calculates which numbers are prime and which are not in $O(n\log_2(n))$     | [`prime.cpp`](./prime.cpp)                                | -                                                                 |
-| Linear Sieve           | Calculates which numbers are prime using optimizations in $O(n)$            | [`linear_sieve.cpp`](./linear_sieve.cpp)                  | [Nisiyama_Suzune's blog](https://codeforces.com/blog/entry/54090) |
-| GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$        | [`gcd`](./gcd)                                    | USACO Guide                                                       |
-| Rolling Hash           | Rolling Polynomial hash prefix sum calculation in $O(n)$                    | [`rolling_hash.cpp`](./rolling_hash.cpp)                  | -                                                                 |
-| Fenwick Tree           | Fenwick Tree, or BIT (Binary Index Tree) for efficient RSQ                  | [`fenwick_tree`](./fenwick_tree)                          | CP4                                                               |
-| DSU                    | Disjoint Set Union, Data Structure representing graph components            | [`dsu`](./dsu)                                            | LeetCode/KACTL                                                    |
+| Name                   | Description                                                                 | File                                                      |
+| ---------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------- |
+| BFS Shortest Path      | Returns the SSSP on an unweighted graph using BFS in $O(V+E)$               | [`bfs_shortest`](./bfs_shortest)                          |
+| Binary Search          | Basic binary search template $O(\log_2{n})$                                 | [`binary-search`](./binary-search)                        |
+| Binary Exponentiation  | Allows you to exponentiate in $O(\log_2{b})$. Can be used with `mulpow.cpp` | [`binpow`](./binpow)                                      |
+| DFS                    | Depth First Search, $O(V+E)$                                                | [`dfs`](./dfs)                                            |
+| Factorial              | Iterative factorial with memoization in $O(n)$                              | [`factorial.cpp`](./factorial.cpp)                        |
+| Dynamic Programming    | Memoization technique to only iterate states                                | [`dynamic_programming`](./dynamic_programming/)           |
+| Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | [`mulmod.cpp`](./mulmod.cpp)                              |
+| Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph | _TODO_ ([Cooperative Game](../codeforces/1137D/main.cpp)) |
+| Sieve of Eratosthenes  | Calculates which numbers are prime and which are not                        | [`prime`](./prime)                                        |
+| GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$        | [`gcd`](./gcd)                                            |
+| Rolling Hash           | Rolling Polynomial hash prefix sum calculation in $O(n)$                    | [`rolling_hash.cpp`](./rolling_hash.cpp)                  |
+| Fenwick Tree           | Fenwick Tree, or BIT (Binary Index Tree) for efficient RSQ                  | [`fenwick_tree`](./fenwick_tree)                          |
+| DSU                    | Disjoint Set Union, Data Structure representing graph components            | [`dsu`](./dsu)                                            |
+| Topological Sort       | Topological Sorting allows you to get an ordering of a DAG                  | [`topological_sort`](./topological_sort)                  |
 
 ## Personal Choices in Starter Template
 

@@ -27,3 +27,7 @@ _TODO: Write about sum queries when using frequency tables_
 _TODO: Write about finding the kth minimum element_
 
 _TODO: Write time complexities_
+
+## Snippet
+
+You can find a snippet from CP4 without PURQ or RURQ at [`fenwick_tree.cpp`](./fenwick_tree.cpp).

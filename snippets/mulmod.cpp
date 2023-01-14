@@ -1,3 +1,5 @@
+// From GeeksForGeeks article
+
 ll mulmod(ll a, ll b, ll mod)
 {
     ll res = 0;
