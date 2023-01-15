@@ -10,7 +10,7 @@ TODO: Move snippets to someplace else to make more accessible
 | DFS                    | Depth First Search, $O(V+E)$                                                | [`dfs`](./dfs)                                            |
 | Factorial              | Iterative factorial with memoization in $O(n)$                              | [`factorial.cpp`](./factorial.cpp)                        |
 | Dynamic Programming    | Memoization technique to only iterate states                                | [`dynamic_programming`](./dynamic_programming/)           |
-| Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | [`mulmod.cpp`](./mulmod.cpp)                              |
+| Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | _TODO_ [`mulmod`](./mulmod)                               |
 | Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph | _TODO_ ([Cooperative Game](../codeforces/1137D/main.cpp)) |
 | Sieve of Eratosthenes  | Calculates which numbers are prime and which are not                        | [`prime`](./prime)                                        |
 | GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$        | [`gcd`](./gcd)                                            |
@@ -18,6 +18,7 @@ TODO: Move snippets to someplace else to make more accessible
 | Fenwick Tree           | Fenwick Tree, or BIT (Binary Index Tree) for efficient RSQ                  | [`fenwick_tree`](./fenwick_tree)                          |
 | DSU                    | Disjoint Set Union, Data Structure representing graph components            | [`dsu`](./dsu)                                            |
 | Topological Sort       | Topological Sorting allows you to get an ordering of a DAG                  | [`topological_sort`](./topological_sort)                  |
+| Dijkstra               | SSSP on graphs without negative cycle                                       | _TODO_ [`dijkstra`](./dijkstra)                           |
 
 ## Personal Choices in Starter Template
 
