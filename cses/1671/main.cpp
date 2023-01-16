@@ -9,6 +9,9 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
 
+  // freopen("ex.txt", "r", stdin);
+  // freopen("ex.out", "w", stdout);
+
   ll n, m;
   cin >> n >> m;
 
@@ -21,20 +24,19 @@ int main() {
   }
 
   priority_queue<pii,vector<pii>,greater<pii>> q;
-  vector<ll> dist(n, INT_MAX);
+  vector<ll> dist(n, LLONG_MAX);
   dist[0] = 0;
   q.push({0, 0});
   while (!q.empty()) {
     ll d = q.top().first;
     ll u = q.top().second;
     q.pop();
-    if (d > dist[u]) {
+    if (d != dist[u]) {
       continue;
     }
     for (auto &v: g[u]) {
       if (d + v.second < dist[v.first]) {
-        dist[v.first] = d + v.second;
-        q.push({d + v.second, v.first});
+        q.push({dist[v.first] = d + v.second, v.first});
       }
     }
   }
