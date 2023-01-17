@@ -1,6 +1,6 @@
 # Dijkstra
 
-Dijkstra solves the SSSP problem efficiently on graphs with non-negative edge weights. It runs in $O(E\log_2 V)$ time, but also has a faster alternative for dense graphs that runs in $O(V^2)$.
+Dijkstra solves the SSSP problem efficiently on graphs with non-negative edge weights. It runs in $O(E\log_2 V)$ time, but also has a faster alternative for dense graphs that runs in $O(V^2+E)$.
 
 ## Applications
 
@@ -15,3 +15,7 @@ Dijkstra works using a greedy approach. It maintains a priority queue containing
 ## Implementation
 
 You can see an implementation of Dijkstra for sparse graphs in [`dijkstra.cpp`](./dijkstra.cpp).
+
+## Dijkstra on Dense Graphs
+
+When working with dense graphs, Dijkstra can be slow because there can be many invalidated distances in the priority queue. Though you probably won't run into this too often in competitive programming, a faster alternative is to run a linear search instead of maintaining a priority queue. This is called Dijkstra on Dense Graphs. You can see an implementation of this in [`dijkstra_dense.cpp`](./dijkstra_dense.cpp).
