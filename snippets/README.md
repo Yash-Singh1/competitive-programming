@@ -8,7 +8,7 @@ TODO: Move snippets to someplace else to make more accessible
 | Binary Search          | Basic binary search template $O(\log_2{n})$                                 | [`binary-search`](./binary-search)                        |
 | Binary Exponentiation  | Allows you to exponentiate in $O(\log_2{b})$. Can be used with `mulpow.cpp` | [`math/binpow`](./math/binpow)                            |
 | DFS                    | Depth First Search, $O(V+E)$                                                | [`graph/dfs`](./graph/dfs)                                |
-| Factorial              | Iterative factorial with memoization in $O(n)$                              | [`math/factorial.cpp`](./math/factorial.cpp)              |
+| Factorial              | Iterative factorial with memoization in $O(n)$                              | [`math/factorial.cpp`](./math/factorial)                  |
 | Dynamic Programming    | Memoization technique to only iterate states                                | [`dynamic_programming`](./dynamic_programming/)           |
 | Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | _TODO_ [`math/mulmod`](./math/mulmod)                     |
 | Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph | _TODO_ ([Cooperative Game](../codeforces/1137D/main.cpp)) |
@@ -20,6 +20,7 @@ TODO: Move snippets to someplace else to make more accessible
 | Topological Sort       | Topological Sorting allows you to get an ordering of a DAG                  | [`graph/topological_sort`](./graph/topological_sort)      |
 | Dijkstra               | SSSP on graphs without negative cycle                                       | [`graph/dijkstra`](./graph/dijkstra)                      |
 | Bellman's Ford         | Bellman's Ford is a SSSP algorithm that detects negative cycles             | [`graph/bellmans-ford`](./graph/bellmans-ford)            |
+| Minimum Spanning Tree  | Minimum Spanning Tree (MST) is minimal weight tree spanning a graph         | [`graph/mst`](./graph/mst)                                |
 
 ## Personal Choices in Starter Template
 
