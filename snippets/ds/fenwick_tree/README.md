@@ -28,6 +28,10 @@ _TODO: Write about finding the kth minimum element_
 
 _TODO: Write time complexities_
 
+## Higher Dimensions
+
+_TODO: Write about higher dimensions_
+
 ## Snippet
 
 You can find a snippet from CP4 without PURQ or RURQ at [`fenwick_tree.cpp`](./fenwick_tree.cpp).
