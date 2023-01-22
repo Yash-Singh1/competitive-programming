@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 #define LSOne(S) ((S) & -(S))
 
 typedef long long ll;
@@ -38,7 +42,6 @@ public:
   }
 
   ll rsq(int j) {
-    if (j < 0) return 0;
     ll sum = 0;
     for (; j; j -= LSOne(j))
       sum += ft[j];
@@ -66,3 +69,34 @@ public:
     return i+1;
   }
 };
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n;
+  cin >> n;
+
+  // Maintain two Fenwick trees, one for the prefix till point other for suffix till point
+  // The answer for each fixed middle is number of less than on left multiplied by greater than on right
+
+  FenwickTree pre(n+1), suf(n+1);
+
+  vector<int> a(n);
+  for (int i{0}; i < n; ++i) cin >> a[i];
+
+  for (int i{0}; i < n; ++i) {
+    suf.update(a[i], 1);
+  }
+
+  ll ans{0};
+  for (int i{0}; i < n; ++i) {
+    suf.update(a[i], -1);
+    ans += (i - pre.rsq(a[i])) * suf.rsq(a[i] - 1);
+    pre.update(a[i], 1);
+  }
+
+  cout << ans << "\n";
+
+  return 0;
+}

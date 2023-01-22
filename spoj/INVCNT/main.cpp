@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 #define LSOne(S) ((S) & -(S))
 
 typedef long long ll;
@@ -38,7 +42,6 @@ public:
   }
 
   ll rsq(int j) {
-    if (j < 0) return 0;
     ll sum = 0;
     for (; j; j -= LSOne(j))
       sum += ft[j];
@@ -66,3 +69,25 @@ public:
     return i+1;
   }
 };
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  ll t, n, x;
+  cin >> t;
+
+  while (t--) {
+    cin >> n;
+    FenwickTree ft(10000001);
+    ll ans{0};
+    for (ll i{0}; i < n; ++i) {
+      cin >> x;
+      ans += i - ft.rsq(x);
+      ft.update(x, 1);
+    }
+    cout << ans << "\n";
+  }
+
+  return 0;
+}

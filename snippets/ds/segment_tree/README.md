@@ -33,6 +33,12 @@ _TODO_
 
 ## Range Updates
 
+## Point Queries
+
+_TODO_
+
+## Range Queries
+
 _TODO_
 
 ## Lazy Propagation

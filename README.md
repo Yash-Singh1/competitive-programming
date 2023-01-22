@@ -28,4 +28,5 @@ My work for competitive programming.
 | DMOJ               | <https://dmoj.ca/>                           | [`dmoj`](./dmoj)                     |
 | TopCoder           | <https://community.topcoder.com/>            | [`topcoder`](./topcoder)             |
 | POJ                | <http://poj.org/>                            | [`poj`](./poj)                       |
+| SPOJ               | <https://www.spoj.com/>                      | [`spoj`](./spoj)                     |
 | Other              | _Miscellaneous_                              | [`practice`](./practice)             |
