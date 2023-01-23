@@ -10,7 +10,7 @@ TODO: Move snippets to someplace else to make more accessible
 | DFS                    | Depth First Search, $O(V+E)$                                                | [`graph/dfs`](./graph/dfs)                           |
 | Factorial              | Iterative factorial with memoization in $O(n)$                              | [`math/factorial.cpp`](./math/factorial)             |
 | Dynamic Programming    | Memoization technique to only iterate states                                | [`alg/dp`](./alg/dp/)                                |
-| Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | _TODO_ [`math/mulmod`](./math/mulmod)                |
+| Modular Multiplication | modular multiplication for mods $\ge10^9$ in $O(a\log_2(b))$                | [`math/mulmod`](./math/mulmod)                |
 | Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph | [`alg/floyds`](./alg/floyds)                         |
 | Sieve of Eratosthenes  | Calculates which numbers are prime and which are not                        | [`math/prime`](./math/prime)                         |
 | GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$        | [`math/gcd`](./math/gcd)                             |

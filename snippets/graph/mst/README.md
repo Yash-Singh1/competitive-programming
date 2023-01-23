@@ -12,20 +12,27 @@ Prim's Algorithm works similar to Dijkstra, but instead it inserts edge weights 
 
 ## Prim's Algorithm with Dense Graphs
 
-Just like Dijkstra's algorithm, Prim's algorithm has a faster version for dense graphs. _TODO_
+Just like Dijkstra's algorithm, Prim's algorithm has a faster version for dense graphs. Prim's Dense Algorithm works by storing the minimum edge connecting to a selected vertex and selecting one vertex at a time, the vertex with the minimum edge weight connecting to a selected vertex. Then, we have to update all the neighbors of the newly vertex with the new edge weight (if it is smaller than the current one). This algorithm takes $O(V^2+E)$ time because we need to iterate over all vertices each and every time and their edges. The space complexity is $O(V+E)$ because we need to store the minimum edge for each vertex and the adjacency lists. You can see an implementation in [prims_dense.cpp](./prims_dense.cpp).
 
 ## Maximum Spanning Tree
 
-_TODO_
+We can calculate the maximum spanning tree of a graph in a similar way as the minimum spanning tree, except when using the Kruskal's algorithm we sort it in non-increasing order and when using Prim's algorithm we use a max priority queue for the sparse version and find the max edge instead for the dense version.
 
 ## Minimum Spanning Forest
 
-_TODO_
+When we are given a disconnected graph, there is the notion of a minimum spanning forest. In the minimum spanning forest, each connected component of the graph has its own minimum spanning tree. The minimum spanning forest is the union of all the minimum spanning trees of the connected components. It can be calculated by running Kruskal's algorithm as usual, but without the DSU check ensuring we have a single connected component.
 
 ## Minimax/Maximin Problems
 
-_TODO_
+The minimax/maximin problem is another type of problem where the minimum or the maximum edge used is asked for. We can calculate this by simply calculating the spanning tree, but instead of summing up all the weights, find the minimum or maximum of them.
 
 ## Second Best ST in $O(VE)$
 
-_TODO_
+We can modify Kruskal's Algorithm to find the second best spanning tree:
+
+1. Sort the edges
+2. Calculate the ST
+3. Iterate over each edge in the ST
+  - Recalculate the ST without that edge
+
+The second best ST will be the minimum or maximum of all of the results. The time complexity is $O(E\log_2{E}+E+VE) = O(VE)$. The third step takes $O(VE)$ because there is only $V-1$ edges in the ST, so we have to recalculate the ST $V-1$ times.
