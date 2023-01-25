@@ -20,11 +20,20 @@ Segment tree works by splitting the array into segments of each power of 2. For 
 
 ## Array Format
 
-Although a segment tree is represented conceptually as a tree, we store it as an array for efficiency. For each element, $x$, the node on the right is $2x+2$ and the node on the left is $2x+1$. This allows us to recursively search through the segment tree for correct matches and update them accordingly.
+Although a segment tree is represented conceptually as a tree, we store it as an array for efficiency. For each element, $x$, the node on the right is $2x+2$ and the node on the left is $2x+1$. This allows us to recursively search through the segment tree for correct matches and update them accordingly. Since there are a max of $2^{\lceil{\log_2(n)}\rceil+1}$, the space complexity of a segment tree is $O(n)$.
 
 ## Range Queries
 
-_TODO_
+When doing range queries, we can recursively go through intersecting elements in the segment tree with the range. For example, in the case of the 4 element segment tree shown above, if we want to find the sum of the range $[2, 4]$, we could:
+
+1. Start at the root node, $[1, 4]$. This node has a partial intersection with the query range, so we go to the left child, $[1, 2]$.
+2. This node also has a partial intersection with the query range, so we go to the left child, $[1, 1]$.
+3. This node is out of the range of the query, so skip it and move onto the right child, $[2, 2]$.
+4. This node has a full intersection with the query range, so we add its value to the answer.
+5. Now we search the right child of the root, $[3, 4]$.
+6. This node has a full intersection with the query range so we add its value to the answer.
+
+This entire process takes about $O(\log_2{n})$ time.
 
 ## Point Updates
 

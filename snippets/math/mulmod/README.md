@@ -12,4 +12,4 @@ The implementation for modular multiplication works similar to that of `binpow`,
 
 ## Implementation
 
-You can see an implementation from GeeksForGeeks at [`mulmod.cpp`](./mulmod.cpp).
+You can see an implementation from GeeksForGeeks at [`mulmod.cpp`](./mulmod.cpp). I also have a `__int128` casting based implementation in [`mulmod_cast.cpp`](./mulmod_cast.cpp).
