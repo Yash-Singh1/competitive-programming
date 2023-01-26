@@ -4,7 +4,7 @@ Modular multiplication allows us to calculate $a\cdot b$ in $O(a\log_2{b})$ time
 
 ## Applications
 
-When we are given a problem that involves multiplication $\mod{\gt 10^9}$, we can use this algorithm to calculate the result without integer overflow for `long long`. Another alternative could be to use `__int128` in C++.
+When we are given a problem that involves multiplication $\mod{\gt 10^9}$, we can use this algorithm to calculate the result without integer overflow for `long long`. Another alternative could be to use `__int128` in C++. This would allow us to use modulus $\ge \frac{2^{63}-1}{2}$.
 
 ## How it Works
 
