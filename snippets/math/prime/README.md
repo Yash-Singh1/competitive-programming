@@ -1,6 +1,6 @@
 # Sieve of Eratosthenes
 
-Calculates which numbers are prime and which are not. _TODO_
+Calculates which numbers are prime and which are not.
 
 ## Count Divisors
 
@@ -20,4 +20,9 @@ There is a method to find prime numbers in linear time however it isn't well kno
 
 ## Segmented Sieve
 
-_TODO_
+Segmented Sieve allows us to find the primes in a range of numbers which has a large high bound, but the range is small. This can be done in $O(\sqrt{h}\log{\log{\sqrt{h}}}+(h-l)\log{\log{\sqrt{h}}})$ time given $h$ is the upper bound and $l$ is the lower bound. The algorithm has two parts to it:
+
+1. Since we know that all factors of a number has a pair that is $\le{\sqrt{h}}$, we can use the normal sieve to find all primes up to $\sqrt{h}$.
+2. We can now iterate over each prime calculated in the previous step and mark all multiples of it in the range $[l, h]$ as composite.
+
+This is basically two sieve steps, one on $[1, \sqrt{h}]$ and another $[l, h]$.
