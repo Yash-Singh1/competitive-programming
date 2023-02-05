@@ -9,8 +9,8 @@ TODO: Move snippets to someplace else to make more accessible
 | Binary Exponentiation  | Allows you to exponentiate in $O(\log_2{b})$. Can be used with `mulpow.cpp` | [`math/binpow`](./math/binpow)                       |
 | DFS                    | Depth First Search, $O(V+E)$                                                | [`graph/dfs`](./graph/dfs)                           |
 | Factorial              | Iterative factorial with memoization in $O(n)$                              | [`math/factorial.cpp`](./math/factorial)             |
-| Dynamic Programming    | Memoization technique to only iterate states                                | [`alg/dp`](./alg/dp/)                                |
-| Modular Multiplication | modular multiplication for mods $\ge2^{32}$ in $O(a\log_2(b))$                | [`math/mulmod`](./math/mulmod)                |
+| Dynamic Programming    | Memoization technique to prevent recalculation for states                   | [`alg/dp`](./alg/dp/)                                |
+| Modular Multiplication | modular multiplication for mods $\ge2^{32}$ in $O(a\log_2(b))$              | [`math/mulmod`](./math/mulmod)                       |
 | Floyd's Algorithm      | Tortoise and Hare Algorithm (Floyd's) for finding cycle in functional graph | [`alg/floyds`](./alg/floyds)                         |
 | Sieve of Eratosthenes  | Calculates which numbers are prime and which are not                        | [`math/prime`](./math/prime)                         |
 | GCD                    | Greatest Common Divisor using Euclidean Algorithm in $O(\log_2(ab))$        | [`math/gcd`](./math/gcd)                             |
@@ -22,6 +22,8 @@ TODO: Move snippets to someplace else to make more accessible
 | Dijkstra               | SSSP on graphs without negative cycle                                       | [`graph/dijkstra`](./graph/dijkstra)                 |
 | Bellman's Ford         | Bellman's Ford is a SSSP algorithm that detects negative cycles             | [`graph/bellmans-ford`](./graph/bellmans-ford)       |
 | Minimum Spanning Tree  | Minimum Spanning Tree (MST) is minimal weight tree spanning a graph         | [`graph/mst`](./graph/mst)                           |
+| Pascal's Identity      | Algorithm to progressively memoize binomials in $O(NR)$                     | [`math/pascals`](./math/pascals)                     |
+| PIE                    | Counts number of elements in subsets given set relationship                 | [`math/pie`](./math/pie)                             |
 
 ## Personal Choices in Starter Template
 
