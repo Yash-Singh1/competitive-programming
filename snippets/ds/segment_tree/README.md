@@ -62,4 +62,4 @@ _TODO_
 
 ## Implementation
 
-You can find a basic implementation of a segment tree at [`segment_tree.cpp`](./segment_tree.cpp).
+You can find a basic implementation of a segment tree at [`segment_tree.cpp`](./segment_tree.cpp). For a more efficient implementation from KACTL see [`kactl.cpp`](./kactl.cpp).
