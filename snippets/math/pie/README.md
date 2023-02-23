@@ -15,3 +15,7 @@ $$
 $$
 
 In other words, the number of elements in the union of all the sets is equal to the sum of the intersection odd sized intersections of sets minus the sum of the intersection of even sized sets of sets.
+
+## Counting Elements with Multiple Properties
+
+When we want at least $k$ of the properties to be satisfied, then we can modify the Principle of Inclusion-Exclusion to support such cases. However, the formula for multiple properties is a bit more complicated, so the best way to count elements with multiple properties is to draw out a Venn Diagram and understand the properties for the specific context.
