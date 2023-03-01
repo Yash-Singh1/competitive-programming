@@ -36,14 +36,14 @@ Some people worry about this taking up too much space in the compiled output,
 however it doesn't take a significant amount and some judges may even run dead
 code elimination on the output in the process.
 
-## `using namespace std`
+### `using namespace std`
 
 While this is a bad practice in an enterprise environment due to namespace conflict,
 it is fine to use in competitive programming as long as you are aware of how you're
 naming your variables, because in competitive programming you want to implement your
 solution faster.
 
-## `ios_base::sync...`
+### `ios_base::sync...`
 
 Read the following links on why this speeds up I/O (Input and Output):
 
