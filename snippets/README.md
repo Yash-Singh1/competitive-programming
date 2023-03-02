@@ -24,6 +24,11 @@ TODO: Move snippets to someplace else to make more accessible
 | Minimum Spanning Tree  | Minimum Spanning Tree (MST) is minimal weight tree spanning a graph         | [`graph/mst`](./graph/mst)                           |
 | Pascal's Identity      | Algorithm to progressively memoize binomials in $O(NR)$                     | [`math/pascals`](./math/pascals)                     |
 | PIE                    | Counts number of elements in subsets given set relationship                 | [`math/pie`](./math/pie)                             |
+| Tree Diameter          | Finding the diameter of a tree and its applications                         | [`graph/tree/diameter`](./graph/tree/diameter)       |
+| Euler Tour             | Euler Tour technique for querying/updating subtrees                         | [`graph/tree/euler_tour`](./graph/tree/euler_tour)   |
+| Tree Traversals        | Different methods of traversing a tree and their applications               | [`graph/tree/traversal`](./graph/tree/traversal)     |
+| Sparse Tables          | Static range and binary lifting query data structure                        | [`ds/sparse_tables`](./ds/sparse_tables)             |
+| LCA                    | Find the Lowest Common Ancestor between two nodes                           | [`graph/tree/lca`](./graph/tree/lca)                 |
 
 ## Personal Choices in Starter Template
 

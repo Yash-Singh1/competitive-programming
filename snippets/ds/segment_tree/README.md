@@ -37,20 +37,15 @@ This entire process takes about $O(\log_2{n})$ time.
 
 ## Point Updates
 
-_TODO_
+When we're updating a specific point in a segment tree, we first update the value of the point in the tree and then update the values of all the nodes that contain that point, which are all the ancestors of the point we are updating. Since the height of a segment tree is $\log_2{n}$, we only have to iterate over $\log_2{n}$ ancestors to find the point and to update the ancestors, the time complexity of updating a point is $O(\log_2{n})$.
 
 ## Range Updates
 
-## Point Queries
+_TODO: RURQ Segment Trees_
 
-_TODO_
-
-## Range Queries
-
-_TODO_
 ## Build Operation
 
-_TODO_
+We can run a build operation in $O(n)$ time by running something similar to the update operation, but instead of eliminating out of bounds nodes, we consider each and every node, because in a build we are updating every node. This allows us to build a segment tree in $O(n)$ time instead of $n$ update operations taking $O(n\log_2{n})$.
 
 ## kth Minimum Query
 
