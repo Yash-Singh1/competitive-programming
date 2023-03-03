@@ -246,3 +246,21 @@ There are several tricks and practices in DP.
 ### Dropping Parameters
 
 When we are doing DP, look for ways to drop parameters. For example, if I can infer the value of a parameter in the state using other parameters in the state, then I can drop that parameter. Sometimes, we also have to make some greedy inferences which removes the need for a parameter. Also, some parameters are better off when they are precomputed. If we are getting a MLE, then check if we can reuse memory for previous DP states that will no longer be used. For example, if my DP transitions are always from $dp[i][j]$ to $dp[i + 1][j]$, then I can drop a dimension and instead maintain two arrays instead of one, e.g. $dp2[j] = ...dp1[j]...$, and at the end of each time we iterate over a new $i$, we run: `swap(dp1, dp2)`. This way, we reuse the memory of the previous array and don't have to allocate a new array for each $i$.
+
+### Usage in Conjunction with Data Structures
+
+Another technique for optimizing is to use it in conjunction with a data structure. For example, if at some point in our DP loops, we have to iterate over $k$ ranges of length $l$ each, instead of running in $\mathcal{O}(kl)$ updating each of these ranges, we can use a prefix sum for our DP array and reduce the time complexity to $\mathcal{O}(k)$. We can also use segment trees, Fenwick trees, and other data structures in our Dynamic Programming array. The best way to figure out which data structure to use and when to use one is to first implement a naive DP solution, and then later optimize it as needed with the use of data structures.
+
+### Placeholder Dimension
+
+To understand how to use this trick, let's look at an example problem (IZhO 2014 Problem B):
+
+> Given ($1\le M\le 20$) banknotes and their value, determine if we can give ($1\le N\le 20$) people their exact salary using those bank notes only. (Time limit: 1 second)
+
+We can use a boolean DP array:
+
+$$
+dp[i][j] = \text{true if we can use the set of banknotes }j\text{ to fulfill the requirements exactly of the first }i\text{ people}
+$$
+
+We can use some trivial bitmask DP to fulfill this. However, this solution will run in $\mathcal{O}(2^m n^2)$ time which takes 4 seconds, more than our time limit of 1 second. we can optimize this by making an observation: any bitmask can cover at most one prefix length. That means, we don't need to have each and every bitmask in each and every prefix length. Instead, we can keep a deque for each prefix length and push on to the deque for the next prefix if possible for each bitmask. In the end the answer is true if the final deque has a bitmask that can cover the entire prefix. We can optionally further decrease the memory used by maintaining two DP arrays and swapping them instead of having one large DP array of deques. The time complexity is $\mathcal{O}(2^m n)$ now because we are iterating over each bitmask at most once. The space complexity is now only $\matcal{O}(2^m)$. FOr an implementation of this solution, check out my [solution](https://github.com/Yash-Singh1/competitive-programming/blob/main/ojuz/IZhO14_bank/main.cpp) to the [problem](https://oj.uz/problem/view/IZhO14_bank).
