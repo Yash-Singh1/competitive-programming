@@ -1,6 +1,6 @@
 # Sparse Tables
 
-Sparse Tables allow us to create a static range query structure in $O(n\log_2{n})$ time for associative operations.
+Sparse Tables allow us to create a static range query structure in $\mathcal{O}(n\log_2{n})$ time for associative operations.
 
 ## How it Works
 
@@ -47,11 +47,11 @@ while (r) {
 
 ## Time Complexity
 
-The time complexity for precomputing is $O(n\log_2{n})$ because we must compute each and every power of two that reaches $n$, $n$ times each for each element. The query operation takes $O(\log_2{n})$, because we must traverse the bits of the length and the length is at most $n$.
+The time complexity for precomputing is $\mathcal{O}(n\log_2{n})$ because we must compute each and every power of two that reaches $n$, $n$ times each for each element. The query operation takes $\mathcal{O}(\log_2{n})$, because we must traverse the bits of the length and the length is at most $n$.
 
 ## Overlapping Technique
 
-We can also calculate the answer to a range query in constant time if the operation is idempotent, such as `max` or `min`. We can do this by realizing that any range can be divided into two possibly overlapping ranges that are both the same power of two length. We can calculate the length of this range by taking the most significant bit (MSB) of the length of the entire range. Then we can output the answer as the right side of the range with the MSB length and the left side of the range with the MSB length. This is because the operation is idempotent, so the answer will be the same regardless of the order of the operation. This gives us a $O(1)$ time complexity for querying.
+We can also calculate the answer to a range query in constant time if the operation is idempotent, such as `max` or `min`. We can do this by realizing that any range can be divided into two possibly overlapping ranges that are both the same power of two length. We can calculate the length of this range by taking the most significant bit (MSB) of the length of the entire range. Then we can output the answer as the right side of the range with the MSB length and the left side of the range with the MSB length. This is because the operation is idempotent, so the answer will be the same regardless of the order of the operation. This gives us a $\mathcal{O}(1)$ time complexity for querying.
 
 ## Implementation
 

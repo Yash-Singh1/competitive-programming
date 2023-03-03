@@ -20,7 +20,7 @@ Phase 3 (finding $\lambda$): Move the fast pointer until it reaches the same poi
 
 ## Time and Space Complexity
 
-This algorithm has a time complexity of $O(n)$ and a space complexity of $O(1)$. The constant space is where this algorithm shines, allowing us to search large graphs and functions without using too much memory.
+This algorithm has a time complexity of $\mathcal{O}(n)$ and a space complexity of $\mathcal{O}(1)$. The constant space is where this algorithm shines, allowing us to search large graphs and functions without using too much memory.
 
 ## Implementation
 

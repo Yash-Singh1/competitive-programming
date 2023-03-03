@@ -16,15 +16,15 @@ There are many forms of implementations for the Disjoint Set Union, each with th
 
 ### QuickFind
 
-`QuickFind` continuously sets the correct ancestor of each element in a set. This makes the find operation $O(1)$, and the union operation $O(n)$. You can see an implementation from LeetCode's Graph Theory modules in [`quickfind.cpp`](./quickfind.cpp).
+`QuickFind` continuously sets the correct ancestor of each element in a set. This makes the find operation $\mathcal{O}(1)$, and the union operation $\mathcal{O}(n)$. You can see an implementation from LeetCode's Graph Theory modules in [`quickfind.cpp`](./quickfind.cpp).
 
 ### QuickUnion
 
-`QuickUnion` unions the sets by simply setting the parent of the root of one of the sets to the other set's root. This makes the union operation $O(n)$, and the find operation up till $O(n)$. The union operation is still $O(n)$ because we need to find the root of each set. You can see an implementation from LeetCode's Graph Theory modules in [`quickunion.cpp`](./quickunion.cpp).
+`QuickUnion` unions the sets by simply setting the parent of the root of one of the sets to the other set's root. This makes the union operation $\mathcal{O}(n)$, and the find operation up till $\mathcal{O}(n)$. The union operation is still $\mathcal{O}(n)$ because we need to find the root of each set. You can see an implementation from LeetCode's Graph Theory modules in [`quickunion.cpp`](./quickunion.cpp).
 
 ## Optimizations
 
-So far, none of the implementations of DSU that we saw were fast enough. They are pretty much the same speed asymptotically as a DFS search every time you add an edge. However, there are some optimizations that can be applied to make the amortized time complexity considerable as $O(1)$.
+So far, none of the implementations of DSU that we saw were fast enough. They are pretty much the same speed asymptotically as a DFS search every time you add an edge. However, there are some optimizations that can be applied to make the amortized time complexity considerable as $\mathcal{O}(1)$.
 
 ### Union by Rank
 
@@ -40,7 +40,7 @@ Path Compression is a technique that doesn't recalculate the ancestor of an elem
 
 ### Time Complexity
 
-Combined, all of these operations make the time complexity the inverse of the Ackermann function, which is represented by the lowercase A in greek $O(\alpha(n))$. In practice in competitive programming, we consider this to be approximately $O(1)$, because the inverse Ackermann function grows very slowly. The time complexity of building the DSU is still $O(n)$, as you have to initialize the array.
+Combined, all of these operations make the time complexity the inverse of the Ackermann function, which is represented by the lowercase A in greek $\mathcal{O}(\alpha(n))$. In practice in competitive programming, we consider this to be approximately $\mathcal{O}(1)$, because the inverse Ackermann function grows very slowly. The time complexity of building the DSU is still $\mathcal{O}(n)$, as you have to initialize the array.
 
 ## Template
 

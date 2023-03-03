@@ -13,11 +13,11 @@ Topological Sort gives an ordering of a directed acyclic graph (DAG) such that f
 
 ## DFS Implementation
 
-The DFS implementation involves a recursive DFS implementation where you insert a node into the ordering after all the children have been visited. Then at the end, we can reverse the ordering. The time complexity of this is $O(V+E)$. The DFS implementation has the advantage of being able to detect cycles and backtrack, but there are a few advantages to the BFS version. You can see the implementation at [`dfs.cpp`](./dfs.cpp).
+The DFS implementation involves a recursive DFS implementation where you insert a node into the ordering after all the children have been visited. Then at the end, we can reverse the ordering. The time complexity of this is $\mathcal{O}(V+E)$. The DFS implementation has the advantage of being able to detect cycles and backtrack, but there are a few advantages to the BFS version. You can see the implementation at [`dfs.cpp`](./dfs.cpp).
 
 ## Kahn's Algorithm
 
-The BFS implementation of topological sort is known as Kahn's Algorithm. It consists of tracking the indegree of each node and adding nodes with an indegree of 0 to a queue. We can add the node to the ordering when we first find it in the queue because we know all its parents have been visited because its indegree has to be 0. The time complexity of this implementation is also $O(V+E)$. It allows you to also find the lexicographically smallest topological ordering and conduct iterative DP while doing topological sort. You can see the implementation at [`kahn.cpp`](./kahn.cpp).
+The BFS implementation of topological sort is known as Kahn's Algorithm. It consists of tracking the indegree of each node and adding nodes with an indegree of 0 to a queue. We can add the node to the ordering when we first find it in the queue because we know all its parents have been visited because its indegree has to be 0. The time complexity of this implementation is also $\mathcal{O}(V+E)$. It allows you to also find the lexicographically smallest topological ordering and conduct iterative DP while doing topological sort. You can see the implementation at [`kahn.cpp`](./kahn.cpp).
 
 ## Lexicographically Smallest
 

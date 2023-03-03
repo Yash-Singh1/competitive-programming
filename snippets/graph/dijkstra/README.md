@@ -1,6 +1,6 @@
 # Dijkstra
 
-Dijkstra solves the SSSP problem efficiently on graphs with non-negative edge weights. It runs in $O(E\log_2 V)$ time, but also has a faster alternative for dense graphs that runs in $O(V^2+E)$.
+Dijkstra solves the SSSP problem efficiently on graphs with non-negative edge weights. It runs in $\mathcal{O}(E\log_2 V)$ time, but also has a faster alternative for dense graphs that runs in $\mathcal{O}(V^2+E)$.
 
 ## Applications
 

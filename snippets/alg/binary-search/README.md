@@ -1,6 +1,6 @@
 # Binary Search
 
-Binary Search works by dividing the search range by two each and every time it searches. This makes the algorithm run in $O(\log_2{n})$.
+Binary Search works by dividing the search range by two each and every time it searches. This makes the algorithm run in $\mathcal{O}(\log_2{n})$.
 
 ## BSTA (Binary Search The Answer)
 
@@ -35,7 +35,7 @@ lo + (hi - lo) / 2
 
 ## Searching Sorted Array
 
-C++ has several builtin functions to leverage binary search to search sorted containers. These functions run in `O(\log_2{n})`. There are three main functions that we usually work with:
+C++ has several builtin functions to leverage binary search to search sorted containers. These functions run in `\mathcal{O}(\log_2{n})`. There are three main functions that we usually work with:
 
 - `find` - `find` takes in the two iterators to search between and the value to search for in the third argument. It searches through a sorted container for an exact match of the value.
 

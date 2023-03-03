@@ -34,7 +34,7 @@ The C++ standard library has several builtin options for GCD, however these opti
 
 ## Time Complexity
 
-The time complexity is $O(\log_2(ab))$ because taking the remainder at least halves the number. The upper bound for the Euclidean Algorithm is the Fibonacci numbers.
+The time complexity is $\mathcal{O}(\log_2(ab))$ because taking the remainder at least halves the number. The upper bound for the Euclidean Algorithm is the Fibonacci numbers.
 
 ## GCD of Multiple Numbers
 

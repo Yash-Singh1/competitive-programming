@@ -1,6 +1,6 @@
 # Pascal's Identity
 
-Pascal's Identity is a mathematical relation between binomial coefficients. It can be used to calculate binomial coefficients from $(0, 0)$ to $(n, k)$ in $O(nk)$ time.
+Pascal's Identity is a mathematical relation between binomial coefficients. It can be used to calculate binomial coefficients from $(0, 0)$ to $(n, k)$ in $\mathcal{O}(nk)$ time.
 
 ## Explanation
 

@@ -20,7 +20,7 @@ Notice that each parent of a subtree is followed by all the nodes inside the sub
 
 ## Time Complexity
 
-The time complexity for finding a Eulerian Tour is $O(n)$. There might be some logarithmic factor if you are using some data structure to store the result of the preorder traversal.
+The time complexity for finding a Eulerian Tour is $\mathcal{O}(n)$. There might be some logarithmic factor if you are using some data structure to store the result of the preorder traversal.
 
 ## Implementation
 

@@ -8,11 +8,11 @@ There are two ways to find the diameter of a tree.
 
 ### Double DFS Search
 
-The double DFS search technique for finding the diameter of a tree finds the furthest node $a$ from any arbritary root of the tree and then finds the furthest node $b$ from the node $a$. The length of the diameter is the length of the distance between $a$ and $b$. This will run in $O(n)$ time because we are just iterating over each node a constant number of times. The path isolation technique helps understand why this technique works. See [`diameter_doubledfs.cpp`](diameter_doubledfs.cpp) for an implementation.
+The double DFS search technique for finding the diameter of a tree finds the furthest node $a$ from any arbritary root of the tree and then finds the furthest node $b$ from the node $a$. The length of the diameter is the length of the distance between $a$ and $b$. This will run in $\mathcal{O}(n)$ time because we are just iterating over each node a constant number of times. The path isolation technique helps understand why this technique works. See [`diameter_doubledfs.cpp`](diameter_doubledfs.cpp) for an implementation.
 
 ### DP on Trees
 
-Another technique for finding the diameter of a tree is using DP on trees. This technique maintains 2 DP arrays, one for the longest route to any node inside the current subtree and another for the longest route to any node outside the current subtree. We can also use this to calculate the longest path across the tree for each node that contains that node. This can be implemented in $O(n)$ time also. Check out [`diameter_dp.cpp`](diameter_dp.cpp) for an implementation.
+Another technique for finding the diameter of a tree is using DP on trees. This technique maintains 2 DP arrays, one for the longest route to any node inside the current subtree and another for the longest route to any node outside the current subtree. We can also use this to calculate the longest path across the tree for each node that contains that node. This can be implemented in $\mathcal{O}(n)$ time also. Check out [`diameter_dp.cpp`](diameter_dp.cpp) for an implementation.
 
 ## Path Isolation
 

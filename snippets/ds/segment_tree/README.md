@@ -20,7 +20,7 @@ Segment tree works by splitting the array into segments of each power of 2. For 
 
 ## Array Format
 
-Although a segment tree is represented conceptually as a tree, we store it as an array for efficiency. For each element, $x$, the node on the right is $2x+2$ and the node on the left is $2x+1$. This allows us to recursively search through the segment tree for correct matches and update them accordingly. Since there are a max of $2^{\lceil{\log_2(n)}\rceil+1}$, the space complexity of a segment tree is $O(n)$.
+Although a segment tree is represented conceptually as a tree, we store it as an array for efficiency. For each element, $x$, the node on the right is $2x+2$ and the node on the left is $2x+1$. This allows us to recursively search through the segment tree for correct matches and update them accordingly. Since there are a max of $2^{\lceil{\log_2(n)}\rceil+1}$, the space complexity of a segment tree is $\mathcal{O}(n)$.
 
 ## Range Queries
 
@@ -33,11 +33,11 @@ When doing range queries, we can recursively go through intersecting elements in
 5. Now we search the right child of the root, $[3, 4]$.
 6. This node has a full intersection with the query range so we add its value to the answer.
 
-This entire process takes about $O(\log_2{n})$ time.
+This entire process takes about $\mathcal{O}(\log_2{n})$ time.
 
 ## Point Updates
 
-When we're updating a specific point in a segment tree, we first update the value of the point in the tree and then update the values of all the nodes that contain that point, which are all the ancestors of the point we are updating. Since the height of a segment tree is $\log_2{n}$, we only have to iterate over $\log_2{n}$ ancestors to find the point and to update the ancestors, the time complexity of updating a point is $O(\log_2{n})$.
+When we're updating a specific point in a segment tree, we first update the value of the point in the tree and then update the values of all the nodes that contain that point, which are all the ancestors of the point we are updating. Since the height of a segment tree is $\log_2{n}$, we only have to iterate over $\log_2{n}$ ancestors to find the point and to update the ancestors, the time complexity of updating a point is $\mathcal{O}(\log_2{n})$.
 
 ## Range Updates
 
@@ -45,7 +45,7 @@ _TODO: RURQ Segment Trees_
 
 ## Build Operation
 
-We can run a build operation in $O(n)$ time by running something similar to the update operation, but instead of eliminating out of bounds nodes, we consider each and every node, because in a build we are updating every node. This allows us to build a segment tree in $O(n)$ time instead of $n$ update operations taking $O(n\log_2{n})$.
+We can run a build operation in $\mathcal{O}(n)$ time by running something similar to the update operation, but instead of eliminating out of bounds nodes, we consider each and every node, because in a build we are updating every node. This allows us to build a segment tree in $\mathcal{O}(n)$ time instead of $n$ update operations taking $\mathcal{O}(n\log_2{n})$.
 
 ## kth Minimum Query
 

@@ -25,8 +25,8 @@ Recursive DFS is often more memory-consuming for larger graphs, but allows for r
 
 ## Time Complexity
 
-Since it has to traverse each node once, and each edge once, DFS has a time complexity of $O(V+E)$.
+Since it has to traverse each node once, and each edge once, DFS has a time complexity of $\mathcal{O}(V+E)$.
 
 ## Space Complexity
 
-Since we have to store the edges in an adjacency list and the nodes in the visited array, the space complexity is also $O(V+E)$.
+Since we have to store the edges in an adjacency list and the nodes in the visited array, the space complexity is also $\mathcal{O}(V+E)$.

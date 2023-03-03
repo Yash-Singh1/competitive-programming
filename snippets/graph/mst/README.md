@@ -4,15 +4,15 @@ The minimum spanning tree is a subset of the edges of a connected, undirected gr
 
 ## Kruskal's Algorithm
 
-Kruskal's Algorithm sorts all the edges in non-decreasing weight order and inserts them if needed one at a time. For each edge, it runs a DSU union between the two vertices. If the union changes nothing, then the edge isn't needed, otherwise the new edge contributes to the total weight of the minimum spanning tree. This algorithm runs in $O(E\log_2{E})$ time as it needs to sort the edges. The space complexity is $O(E)$. You can see an implementation in [kruskals.cpp](./kruskals.cpp).
+Kruskal's Algorithm sorts all the edges in non-decreasing weight order and inserts them if needed one at a time. For each edge, it runs a DSU union between the two vertices. If the union changes nothing, then the edge isn't needed, otherwise the new edge contributes to the total weight of the minimum spanning tree. This algorithm runs in $\mathcal{O}(E\log_2{E})$ time as it needs to sort the edges. The space complexity is $\mathcal{O}(E)$. You can see an implementation in [kruskals.cpp](./kruskals.cpp).
 
 ## Prim's Algorithm
 
-Prim's Algorithm works similar to Dijkstra, but instead it inserts edge weights in the priority queue, not the distance to the node. It starts with a single node and inserts all the edges that connect to it in the priority queue. Then it pops the minimum edge and inserts all the edges that connect to the other node of the edge. This process is continued until all the nodes are visited. Prim's Algorithm also runs in $O(E\log_2{E})$ times as priority queue insertions take $O(log_2(E))$ time. The space complexity is $O(E)$ as well, because we have to store all the edges in an adjacency list/matrix. You can see an implementation in [prims.cpp](./prims.cpp).
+Prim's Algorithm works similar to Dijkstra, but instead it inserts edge weights in the priority queue, not the distance to the node. It starts with a single node and inserts all the edges that connect to it in the priority queue. Then it pops the minimum edge and inserts all the edges that connect to the other node of the edge. This process is continued until all the nodes are visited. Prim's Algorithm also runs in $\mathcal{O}(E\log_2{E})$ times as priority queue insertions take $\mathcal{O}(log_2(E))$ time. The space complexity is $\mathcal{O}(E)$ as well, because we have to store all the edges in an adjacency list/matrix. You can see an implementation in [prims.cpp](./prims.cpp).
 
 ## Prim's Algorithm with Dense Graphs
 
-Just like Dijkstra's algorithm, Prim's algorithm has a faster version for dense graphs. Prim's Dense Algorithm works by storing the minimum edge connecting to a selected vertex and selecting one vertex at a time, the vertex with the minimum edge weight connecting to a selected vertex. Then, we have to update all the neighbors of the newly vertex with the new edge weight (if it is smaller than the current one). This algorithm takes $O(V^2+E)$ time because we need to iterate over all vertices each and every time and their edges. The space complexity is $O(V+E)$ because we need to store the minimum edge for each vertex and the adjacency lists. You can see an implementation in [prims_dense.cpp](./prims_dense.cpp).
+Just like Dijkstra's algorithm, Prim's algorithm has a faster version for dense graphs. Prim's Dense Algorithm works by storing the minimum edge connecting to a selected vertex and selecting one vertex at a time, the vertex with the minimum edge weight connecting to a selected vertex. Then, we have to update all the neighbors of the newly vertex with the new edge weight (if it is smaller than the current one). This algorithm takes $\mathcal{O}(V^2+E)$ time because we need to iterate over all vertices each and every time and their edges. The space complexity is $\mathcal{O}(V+E)$ because we need to store the minimum edge for each vertex and the adjacency lists. You can see an implementation in [prims_dense.cpp](./prims_dense.cpp).
 
 ## Maximum Spanning Tree
 
@@ -26,7 +26,7 @@ When we are given a disconnected graph, there is the notion of a minimum spannin
 
 The minimax/maximin problem is another type of problem where the minimum or the maximum edge used is asked for. We can calculate this by simply calculating the spanning tree, but instead of summing up all the weights, find the minimum or maximum of them.
 
-## Second Best ST in $O(VE)$
+## Second Best ST in $\mathcal{O}(VE)$
 
 We can modify Kruskal's Algorithm to find the second best spanning tree:
 
@@ -35,4 +35,4 @@ We can modify Kruskal's Algorithm to find the second best spanning tree:
 3. Iterate over each edge in the ST
   - Recalculate the ST without that edge
 
-The second best ST will be the minimum or maximum of all of the results. The time complexity is $O(E\log_2{E}+E+VE) = O(VE)$. The third step takes $O(VE)$ because there is only $V-1$ edges in the ST, so we have to recalculate the ST $V-1$ times.
+The second best ST will be the minimum or maximum of all of the results. The time complexity is $\mathcal{O}(E\log_2{E}+E+VE) = \mathcal{O}(VE)$. The third step takes $\mathcal{O}(VE)$ because there is only $V-1$ edges in the ST, so we have to recalculate the ST $V-1$ times.

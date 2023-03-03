@@ -1,6 +1,6 @@
 # Binary Exponentiation
 
-Binary exponentiation is a technique for calculating a number $a^b\mod{m}$ in $O(\log_2{b})$ time.
+Binary exponentiation is a technique for calculating a number $a^b\mod{m}$ in $\mathcal{O}(\log_2{b})$ time.
 
 ## Applications
 
@@ -16,7 +16,7 @@ Binary Exponentiation works by the Divide & Conquer approach. It takes advantage
 
 ![Explanation](explanation.png)
 
-Since we have to calculate the $\log_2{b}$ segments, the time complexity is $O(\log_2{b})$, and the space complexity is $O(1)$, because we just need to store a few numbers. Since we are simply multiplying, we can continuously modulus our variables by the given modulus number. For modulus numbers $\ge2^32$, we have to use modular multiplication instead of regular multiplication, to prevent edge case overflow.
+Since we have to calculate the $\log_2{b}$ segments, the time complexity is $\mathcal{O}(\log_2{b})$, and the space complexity is $\mathcal{O}(1)$, because we just need to store a few numbers. Since we are simply multiplying, we can continuously modulus our variables by the given modulus number. For modulus numbers $\ge2^32$, we have to use modular multiplication instead of regular multiplication, to prevent edge case overflow.
 
 ## Snippet
 

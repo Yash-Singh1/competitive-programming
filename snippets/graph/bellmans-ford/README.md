@@ -1,6 +1,6 @@
 # Bellman's Ford
 
-Bellman's Ford is an SSSP algorithm that runs in $O(VE)$ time.
+Bellman's Ford is an SSSP algorithm that runs in $\mathcal{O}(VE)$ time.
 
 ## Applications
 
@@ -20,7 +20,7 @@ You can see an implementation of Bellman's Ford algorithm in [`bellman.cpp`](./b
 
 ## Time Complexity
 
-The time complexity of Bellman's Ford is $O(VE)$. This is because we have to iterate over each edge $V$ times.
+The time complexity of Bellman's Ford is $\mathcal{O}(VE)$. This is because we have to iterate over each edge $V$ times.
 
 ## Moore's Optimization
 

@@ -1,6 +1,6 @@
 # Modular Multiplication
 
-Modular multiplication allows us to calculate $a\cdot b$ in $O(a\log_2{b})$ time.
+Modular multiplication allows us to calculate $a\cdot b$ in $\mathcal{O}(a\log_2{b})$ time.
 
 ## Applications
 
