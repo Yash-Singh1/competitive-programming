@@ -173,6 +173,7 @@ void regemx(ll mx) {
     digits.push_back(mx % 10);
     mx /= 10;
   }
+  reverse(digits.begin(), digits.end());
 }
 ```
 
