@@ -30,4 +30,5 @@ My work for competitive programming.
 | POJ                | <http://poj.org/>                            | [`poj`](./poj)                       |
 | SPOJ               | <https://www.spoj.com/>                      | [`spoj`](./spoj)                     |
 | SAPO               | <https://saco-evaluator.org.za/>             | [`sapo`](./sapo)                     |
+| PrepBytes          | <https://mycode.prepbytes.com/>              | [`prepbytes`](./prepbytes)           |
 | Other              | _Miscellaneous_                              | [`practice`](./practice)             |
