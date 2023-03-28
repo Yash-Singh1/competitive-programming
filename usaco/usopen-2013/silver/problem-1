@@ -1,0 +1,112 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef pair<int,int> pii;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  freopen("gravity.in", "r", stdin);
+  freopen("gravity.out", "w", stdout);
+
+  // We can either fall all the way down (after right/left) (cost = 0)
+	// We can go all the way up (cost = 1)
+	// We can go left/right (cost = 0)
+
+	// Basic grid paths but different rules, shouldn't be too bad to BFS
+
+  int n, m;
+  cin >> n >> m;
+
+  vector<vector<char>> grid(n, vector<char>(m));
+  pii start, end;
+  for (int i{0}; i < n; ++i) {
+    for (int j{0}; j < m; ++j) {
+      cin >> grid[i][j];
+      if (grid[i][j] == 'C') start = {i,j};
+      else if (grid[i][j] == 'D') end = {i,j};
+    }
+  }
+
+  // precompute directly above and directly below
+  vector<vector<pii>> above(n, vector<pii>(m)), below(n, vector<pii>(m));
+  for (int i{0}; i < n; ++i) {
+    for (int j{0}; j < m; ++j) {
+      if (grid[i][j] != '#') {
+        if (i) {
+          above[i][j] = above[i-1][j];
+          if (grid[i-1][j] == '#') {
+            above[i][j] = {i,j};
+          }
+        } else {
+          above[i][j] = {-1, -1};
+        }
+      } else {
+        above[i][j] = {-1, -1};
+      }
+    }
+  }
+  for (int i{n-1}; i >= 0; --i) {
+    for (int j{0}; j < m; ++j) {
+      if (grid[i][j] != '#') {
+        if (i < n-1) {
+          below[i][j] = below[i+1][j];
+          if (grid[i+1][j] == '#') {
+            below[i][j] = {i,j};
+          }
+        } else {
+          below[i][j] = {-1, -1};
+        }
+      } else {
+        below[i][j] = {i,j};
+      }
+    }
+  }
+
+  start = below[start.first][start.second];
+  if (start.first == -1) {
+    cout << "-1\n";
+    return 0;
+  }
+  vector<vector<vector<int>>> dist(n, vector<vector<int>>(m, vector<int>(2, INT_MAX)));
+  queue<pair<pii,bool>> q;
+  q.push({start, 1});
+  dist[start.first][start.second][1] = 0;
+  while (q.size()) {
+    int x = q.front().first.second;
+    int y = q.front().first.first;
+    bool normal = q.front().second;
+    q.pop();
+    // horizontal doesn't flip with gravity
+    if (x != m-1 && grid[y][x+1] != '#') {
+      pii rr = (normal?below:above)[y][x+1];
+      if (rr.first != -1 && dist[y][x][normal] < dist[rr.first][rr.second][normal]) {
+        dist[rr.first][rr.second][normal] = dist[y][x][normal];
+        q.push({rr, normal});
+      }
+    }
+    if (x && grid[y][x-1] != '#') {
+      pii ll = (normal?below:above)[y][x-1];
+      if (ll.first != -1 && dist[y][x][normal] < dist[ll.first][ll.second][normal]) {
+        dist[ll.first][ll.second][normal] = dist[y][x][normal];
+        q.push({ll, normal});
+      }
+    }
+    pii antiflip = (normal?below:above)[end.first][end.second];
+    if (antiflip.first == y && antiflip.second == x && dist[y][x][normal]+1 < dist[end.first][end.second][!normal]) {
+      dist[end.first][end.second][!normal] = dist[y][x][normal]+1;
+    }
+    pii flip = (normal?above:below)[y][x];
+    if (flip.first != -1 && dist[y][x][normal]+1 < dist[flip.first][flip.second][!normal]) {
+      dist[flip.first][flip.second][!normal] = dist[y][x][normal]+1;
+      q.push({flip, !normal});
+    }
+  }
+
+  int ans{min(dist[end.first][end.second][0], dist[end.first][end.second][1])};
+  cout << (ans == INT_MAX ? -1 : ans) << '\n';
+
+  return 0;
+}
