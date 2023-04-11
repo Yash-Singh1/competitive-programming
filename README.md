@@ -32,3 +32,4 @@ My work for competitive programming.
 | SAPO               | <https://saco-evaluator.org.za/>             | [`sapo`](./sapo)                     |
 | PrepBytes          | <https://mycode.prepbytes.com/>              | [`prepbytes`](./prepbytes)           |
 | Other              | _Miscellaneous_                              | [`practice`](./practice)             |
+| CPI                | <https://joincpi.org/contests>               | [`cpi`](./cpi)                       |
