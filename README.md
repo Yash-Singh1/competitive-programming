@@ -33,3 +33,4 @@ My work for competitive programming.
 | PrepBytes          | <https://mycode.prepbytes.com/>              | [`prepbytes`](./prepbytes)           |
 | Other              | _Miscellaneous_                              | [`practice`](./practice)             |
 | CPI                | <https://joincpi.org/contests>               | [`cpi`](./cpi)                       |
+| PurpleComet        | <https://purplecomet.org/>                   | [`purplecomet`](./purplecomet)       |
