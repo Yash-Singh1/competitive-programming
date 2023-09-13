@@ -54,6 +54,20 @@
       "args": [],
       "cwd": "${fileDirname}",
       "preLaunchTask": "C/C++: g++ build active file"
-    }
+    },
+    {
+      "name": "Launch (lldb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "miDebuggerPath": "/Users/yashsingh/.vscode/extensions/ms-vscode.cpptools-1.17.5-darwin-arm64/debugAdapters/lldb-mi/bin/lldb-mi",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: clang++ build active file",
+      "environment": [],
+      "externalConsole": false
+    },
   ]
 }
