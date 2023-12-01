@@ -35,3 +35,7 @@ screenshots/
 # File I/O
 *.in
 *.out
+
+# Bun
+bun.lockb
+node_modules/
