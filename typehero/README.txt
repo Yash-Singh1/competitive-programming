@@ -1,0 +1,1 @@
+Couldn't find any better place to keep my Extreme rated solutions on TypeHero.
