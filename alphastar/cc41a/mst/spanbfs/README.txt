@@ -1,0 +1,1 @@
+Just replace all stack with queue and fix methods in spandfs. Too lazy to write a sed script or smth to do this, just use editor stuff.

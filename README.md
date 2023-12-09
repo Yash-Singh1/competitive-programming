@@ -34,3 +34,5 @@ My work for competitive programming.
 | Other              | _Miscellaneous_                              | [`practice`](./practice)             |
 | CPI                | <https://joincpi.org/contests>               | [`cpi`](./cpi)                       |
 | PurpleComet        | <https://purplecomet.org/>                   | [`purplecomet`](./purplecomet)       |
+| AlphaStar          | <https://alphastar.academy/>                 | [`alphastar`](./alphastar)           |
+| TypeHero           | <https://typehero.dev/>                      | [`typehero`](./typehero)             |
