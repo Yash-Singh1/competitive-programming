@@ -39,3 +39,6 @@ screenshots/
 # Bun
 bun.lockb
 node_modules/
+
+# Mac
+.DS_Store
