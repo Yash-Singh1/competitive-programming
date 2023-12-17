@@ -10,8 +10,8 @@ const lines = trimmed.split(DELIM);
 let ans = 0;
 
 let grid = lines.map((line) => line.split(""));
-console.log(grid);
-let starters = [];
+// console.log(grid);
+let starters: [number, number, number][] = [];
 for (let i = 0; i < grid.length; i++) {
   starters.push([i, 0, 0]);
   starters.push([i, grid.length - 1, 1]);
@@ -126,15 +126,15 @@ for (const starter of starters) {
   }
 
   if (minans > ans) {
-    console.log(minans);
-    console.log(starter);
+    // console.log(minans);
+    // console.log(starter);
     for (let i = 0; i < energized.length; i++) {
       let line = "";
       for (let j = 0; j < energized[i].length; j++) {
         if (energized[i][j]) line += "#";
         else line += ".";
       }
-      console.log(line);
+      // console.log(line);
     }
   }
 
@@ -142,7 +142,7 @@ for (const starter of starters) {
 }
 
 console.log(ans);
-fs.writeFileSync(
-  "out.txt",
-  fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
-);
+// fs.writeFileSync(
+//   "out.txt",
+//   fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
+// );

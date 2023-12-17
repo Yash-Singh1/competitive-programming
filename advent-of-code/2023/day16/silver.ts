@@ -112,7 +112,7 @@ for (let i = 0; i < energized.length; i++) {
 }
 
 console.log(ans);
-fs.writeFileSync(
-  "out.txt",
-  fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
-);
+// fs.writeFileSync(
+//   "out.txt",
+//   fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
+// );
