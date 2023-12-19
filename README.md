@@ -1,6 +1,6 @@
 # `competitive-programming`
 
-My work for competitive programming.
+My work for competitive programming. This is generally where I throw in all of my solutions from live contests or practice.
 
 ## Contests
 
