@@ -1,3 +1,5 @@
+// Explanation: https://www.yashsingh.us/blog/post/comparing-ints-generics
+
 enum Comparison {
   Greater,
   Equal,
