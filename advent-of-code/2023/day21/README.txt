@@ -1,0 +1,1 @@
+Lmao i took forever on this one look at bottom of goldviz.ts, I will get to cleaning this up later
