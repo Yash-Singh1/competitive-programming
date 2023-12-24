@@ -1,4 +1,3 @@
-import assert from "node:assert";
 import fs from "node:fs";
 
 const DELIM = "\n";
@@ -26,12 +25,12 @@ lines.forEach((line) => {
       break;
     }
   }
-  console.log(dd)
+  // console.log(dd)
   dd[dd.length - 1] = [0, ...dd[dd.length - 1]];
   for (let i = dd.length - 2; i >= 0; --i) {
     dd[i] = [dd[i][0] - dd[i + 1][0], ...dd[i]];
   }
-  console.log(dd)
+  // console.log(dd)
   ans += dd[0][0];
 });
 

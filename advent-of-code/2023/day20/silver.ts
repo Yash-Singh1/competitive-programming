@@ -71,7 +71,7 @@ let i = 0;
 
 const seen = new Set<string>();
 
-for (; !rxreached; ++i) {
+for (; i < 1000; ++i) {
   console.log(i)
   let q = [['broadcaster', 'low', 'broadcaster']];
   while (q.length > 0) {
@@ -116,12 +116,12 @@ for (; !rxreached; ++i) {
       }
     }
   }
-  console.log(Object.values(conjunctionstate['kk']), Object.values(conjunctionstate['vt']), Object.values(conjunctionstate['xr']), Object.values(conjunctionstate['fv']));
+  // console.log(Object.values(conjunctionstate['kk']), Object.values(conjunctionstate['vt']), Object.values(conjunctionstate['xr']), Object.values(conjunctionstate['fv']));
 }
 
 // run('broadcaster', 'low', 'broadcaster');
 
-ans = i;
+ans = pulsessent['low'] * pulsessent['high'];
 
 console.log(ans);
 fs.writeFileSync(

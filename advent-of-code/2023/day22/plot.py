@@ -1,4 +1,4 @@
-# Coped from shrey vishen, he is better at visualization than me
+# Coped from Shrey Vishen, he is better at visualization than me
 
 import matplotlib.pyplot as plt
 

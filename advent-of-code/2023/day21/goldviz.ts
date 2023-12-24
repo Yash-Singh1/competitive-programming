@@ -32,8 +32,8 @@ for (let i = 0; i < times; i++) {
 }
 
 let startpos = [0, 0];
-$: for (let i = (gridn.length + 2) * Math.floor(times / 2); i < grid.length; i++) {
-  for (let j = (gridn[0].length + 2) * Math.floor(times / 2); j < grid[0].length; j++) {
+$: for (let i = (gridn.length + 2) * Math.floor((times-1) / 2); i < grid.length; i++) {
+  for (let j = (gridn[0].length + 2) * Math.floor((times-1) / 2); j < grid[0].length; j++) {
 // $: for (let i = 0; i < grid.length; i++) {
 //   for (let j = 0; j < grid.length; j++) {
     if (grid[i][j] === "S") {

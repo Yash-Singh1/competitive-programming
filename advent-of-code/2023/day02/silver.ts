@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 const DELIM = "\n";
 
-const input = fs.readFileSync("message (4).txt", "utf-8");
+const input = fs.readFileSync("in.txt", "utf-8");
 const lines = input.split(DELIM);
 const trimmed = input.trim();
 

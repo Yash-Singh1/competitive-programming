@@ -90,12 +90,12 @@ for (let i = 0; i < grid.length; ++i) {
     str +=
       min[i][j].flat(5).reduce((acc, a) => Math.min(acc, a), Infinity) + " ";
   }
-  console.log(str);
+  // console.log(str);
 }
 
 ans = Infinity;
 
-console.log(min);
+// console.log(min);
 
 for (let k = 0; k < 4; ++k) {
   ans = Math.min(ans, ...min[grid.length - 1][grid[0].length - 1][k]);
