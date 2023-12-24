@@ -43,6 +43,7 @@ const vis = new Set<string>();
 
 let q: [number, number, number, Set<number>, number][] = [];
 let aroundgoodie = new Set<number>();
+let aroundgoodiemap: Record<number, number> = {};
 for (let i = 1; i < grid.length - 1; ++i) {
   for (let j = 1; j < grid[i].length - 1; ++j) {
     if (grid[i][j] === "#") continue;
@@ -67,10 +68,12 @@ for (let i = 1; i < grid.length - 1; ++i) {
         i * (grid.length + 1) + j,
       ]);
       aroundgoodie.add(i * (grid.length + 1) + j);
+      aroundgoodiemap[i * (grid.length + 1) + j] = aroundgoodie.size;
     }
   }
 }
 
+aroundgoodiemap[1] = 0;
 q.push([0, 1, 0, new Set([1]), 1]);
 q.push([
   grid.length - 1,
@@ -81,20 +84,22 @@ q.push([
 ]);
 
 aroundgoodie.add(0 * (grid.length + 1) + 1);
+aroundgoodiemap[(grid.length - 1) * (grid.length + 1) + grid[0].length - 2] =
+  aroundgoodie.size;
 aroundgoodie.add((grid.length - 1) * (grid.length + 1) + grid[0].length - 2);
 
-// for (let i = 0; i < grid.length; ++i) {
-//   for (let j = 0; j < grid[i].length; ++j) {
-//     process.stdout.write(
-//       aroundgoodie.has(i * (grid.length + 1) + j)
-//         ? ("000" + (i * (grid.length + 1) + j)).slice(-4)
-//         : grid[i][j].repeat(4)
-//     );
-//   }
-//   process.stdout.write("\n");
-// }
+for (let i = 0; i < grid.length; ++i) {
+  for (let j = 0; j < grid[i].length; ++j) {
+    process.stdout.write(
+      aroundgoodie.has(i * (grid.length + 1) + j)
+        ? ("000" + (i * (grid.length + 1) + j)).slice(-4)
+        : grid[i][j].repeat(4)
+    );
+  }
+  process.stdout.write("\n");
+}
 
-// console.log(aroundgoodie);
+console.log(aroundgoodiemap);
 
 const edges: Record<number, [number, number][]> = {};
 
@@ -141,11 +146,14 @@ q2.push([0, new Set([1]), 1]);
 let dists: Record<string, number> = {};
 dists[1] = 0;
 while (q2.isEmpty() === false) {
-  let [l, vis, x] = (q2.pop());
+  let [l, vis, x] = q2.pop();
   // console.log(l);
+  if (x === (grid.length - 1) * (grid.length + 1) + grid[0].length - 2) {
+    continue;
+  }
   for (const [nx, li] of edges[x]) {
     if (nx === (grid.length - 1) * (grid.length + 1) + grid[0].length - 2) {
-      ans = Math.max(ans, l + li)
+      ans = Math.max(ans, l + li);
     }
     assert(li < 1000);
     let vis2 = new Set(vis);
@@ -164,7 +172,7 @@ while (q2.isEmpty() === false) {
 
 // console.log(aroundgoodie.size)
 
-console.log(dists[(grid.length - 1) * (grid.length+1) + grid[0].length - 2]);
+console.log(dists[(grid.length - 1) * (grid.length + 1) + grid[0].length - 2]);
 
 console.log(ans);
 fs.writeFileSync(
