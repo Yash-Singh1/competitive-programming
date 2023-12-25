@@ -101,7 +101,6 @@ async function runAll() {
 
       let results: Result[] = [];
       const partNum = parts.indexOf(part) + 1;
-      const input = Bun.file(`${dayDir}/in.txt`);
       const runtimeFile = `./${
         benchmap.map?.[Number(dayNumber)]?.[part] ?? `${part}.ts`
       }`;
@@ -133,12 +132,15 @@ async function runAll() {
       let tled = 0;
       for (let i = 0; i < 5; i++) {
         const start = performance.now();
+        let tle = true;
+        let end;
         const process = spawn({
           cmd: [...runtimeCmd[runtime], runtimeFile, "in.txt"],
           cwd: `./${dayDir}`,
-          stdin: input,
+          onExit() {
+            end = performance.now();
+          },
         });
-        let tle = true;
         for (let i = 0; i < 200; ++i) {
           if (process.killed) {
             tle = false;
@@ -157,8 +159,8 @@ async function runAll() {
           spinner.fail("Runtime Error");
           break;
         } else {
-          results.push(performance.now() - start);
-          overall += performance.now() - start;
+          results.push(end - start);
+          overall += results[results.length - 1] as number;
           if (i < 4) {
             spinner.text = `Running day ${dayNumber} Part ${partNum} (${
               i + 1
