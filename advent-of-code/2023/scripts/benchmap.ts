@@ -30,6 +30,9 @@ const benchmap = {
     24: {
       gold: "gold.cjs",
     },
+    25: {
+      silver: "silver2.ts",
+    },
   },
   runtimeMap: {
     24: {
