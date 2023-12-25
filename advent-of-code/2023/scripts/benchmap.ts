@@ -15,7 +15,7 @@ interface Benchmap {
 }
 
 const benchmap = {
-  skip: ["day13/gold", "day22/silver"],
+  skip: ["day22/silver"],
   map: {
     20: {
       gold: "gold2.ts",

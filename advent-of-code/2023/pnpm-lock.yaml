@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  disjoint-set:
+    specifier: ^1.1.8
+    version: 1.1.8
   markdown-table:
     specifier: ^3.0.3
     version: 3.0.3
@@ -88,6 +91,10 @@ packages:
     resolution: {integrity: sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==}
     engines: {node: '>=6'}
     dev: true
+
+  /disjoint-set@1.1.8:
+    resolution: {integrity: sha512-J90ypJ4kvJwVaZK+93weuWU7RZczFRj5kt19885F1NKDBkcqS+VmpJBHEtEWMTzXeZYBnGIfLKGi/TN3CKNadg==}
+    dev: false
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
