@@ -186,7 +186,7 @@ async function runAll() {
 
   await Bun.write("bench.json", JSON.stringify(cacheResult, null, 2));
 
-  overallTimes.sort();
+  overallTimes.sort((a, b) => a[0] - b[0]);
 
   const problemToRank = new Map<string, number>();
   for (let i = 0; i < overallTimes.length; ++i) {
