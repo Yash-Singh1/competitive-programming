@@ -54,14 +54,8 @@ for (let i = 0; i < bricks.length; i++) {
   }
 }
 
-console.log(bricks)
-
 for (let j = bricks.length - 1; j >= 0; --j) {
   let tempunder = [...under.map((x) => [...x])];
-
-  // if ([...above[j]].every((x) => under[x].size > 1)) {
-  //   ++ans;
-  // }
 
   let q: number[] = [j];
 

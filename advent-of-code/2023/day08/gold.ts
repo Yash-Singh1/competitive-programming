@@ -86,8 +86,8 @@ for (const line of lines.slice(2)) {
 ans = lcm([...factors]);
 
 console.log(ans);
-fs.writeFileSync("edges.txt", edges);
-fs.writeFileSync(
-  "out.txt",
-  fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
-);
+// fs.writeFileSync("edges.txt", edges);
+// fs.writeFileSync(
+//   "out.txt",
+//   fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
+// );

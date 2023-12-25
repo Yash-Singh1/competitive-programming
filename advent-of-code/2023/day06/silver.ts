@@ -33,7 +33,7 @@ for (let i = 0; i < times.length; i++) {
 }
 
 console.log(sum);
-fs.writeFileSync(
-  "out.txt",
-  fs.readFileSync("out.txt", "utf-8") + "\n" + sum + "\n"
-);
+// fs.writeFileSync(
+//   "out.txt",
+//   fs.readFileSync("out.txt", "utf-8") + "\n" + sum + "\n"
+// );

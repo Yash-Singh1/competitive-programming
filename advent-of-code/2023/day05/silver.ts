@@ -61,7 +61,7 @@ for (let seed of seeds) {
 sum = mn;
 
 console.log(sum);
-fs.writeFileSync(
-  "out.txt",
-  fs.readFileSync("out.txt", "utf-8") + "\n" + sum + "\n"
-);
+// fs.writeFileSync(
+//   "out.txt",
+//   fs.readFileSync("out.txt", "utf-8") + "\n" + sum + "\n"
+// );

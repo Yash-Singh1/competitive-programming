@@ -56,11 +56,6 @@ function canStack(
   return false;
 }
 
-// 1,0,1~1,2,1
-// 0,0,2~2,0,2
-
-console.log(JSON.stringify(bricks));
-
 let stacking: number[][] = bricks.map((x) => []);
 let stackit: number[][] = bricks.map((x) => []);
 let brick2 = bricks.map((x) => [...x]);
@@ -68,10 +63,8 @@ let brick2 = bricks.map((x) => [...x]);
 for (let i = 0; i < bricks.length; i++) {
   let curz = bricks[i][0];
   let fell = false;
-  let stacker = 0;
   for (let j = i - 1; j >= 0; --j) {
     if (fell) {
-      // console.log(fell, j, bricks[j].slice(1), curz === bricks[j][0], canStack([...bricks[j].slice(1)], [...bricks[i].slice(1)]))
       if (
         curz - 1 === bricks[j][0] &&
         canStack(
@@ -105,7 +98,6 @@ for (let i = 0; i < bricks.length; i++) {
         ]
       )
     ) {
-      // console.log('pls', bricks[i].slice(1), bricks[j].slice(1), [i, j])
       curz = bricks[j][0] + 1;
       fell = true;
       stacking[i].push(j);
@@ -118,64 +110,24 @@ for (let i = 0; i < bricks.length; i++) {
   bricks[i][0] = curz;
   bricks[i][1][2] = curz;
   bricks[i][2][2] = curz;
-  // console.log(bricks[i]);
   brick2[i] = bricks[i];
-  // stacking[i] = stacker;
-  // bricks = bricks.sort();
 }
-
-console.log(JSON.stringify(bricks));
 
 stacking = stacking.map((x) => [...new Set(x)]);
 stackit = stackit.map((x) => [...new Set(x)]);
 
-console.log(JSON.stringify(stacking));
-console.log(JSON.stringify(stackit));
-
-let ansarr = bricks.map((x) => -1);
-
 for (let j = 0; j < bricks.length; ++j) {
-  let mp = new Map<number, number>();
-  let tempstacking = [...stacking.map((x) => [...x])];
-  function above(a: number) {
-    // if (stacking[a] > 1) return 0;
-    // if (mp.has(a)) return 0;
-    // mp.set(a, 1);
-    // if (ansarr[a] !== -1) return ansarr[a];
-    // assert(stackit[a].every((x) => tempstacking[x].includes(a)));
-    let ansi: number =
-      1 +
-      stackit[a].reduce((acc, x) => {
-        tempstacking[x] = tempstacking[x].filter((y) => y !== a);
-        return acc + (tempstacking[x].length > 0 ? 0 : above(x));
-      }, 0);
-    // mp.set(a, 1 + (mp.get(a) ?? 0));
-    // console.log(a, ansi, stackit[a]);
-    return ansi;
-  }
   let canstackit = true;
-  // console.log(j, stackit[j])
   for (const k of stackit[j]) {
-    // console.log(j, k, stackit[k]);
-    if (stackit[k].length === 1) {
+    if (stacking[k].length === 1) {
       canstackit = false;
       break;
     }
   }
-  // if (!canstackit) {
-  // console.log(j);
-  // ansarr[j] = ;
-  let preans = ans;
-  ans += above(j) - 1;
-  // console.log("diff", ans - preans);
-  // console.log(ans);
-  // } else {
-  //   // ansarr[j] = 0;
-  // }
-  // mp = new Map<number, number>();
+  if (canstackit) {
+    ++ans;
+  }
 }
-
-// console.log(mp.values());
 
 console.log(ans);
 fs.writeFileSync(

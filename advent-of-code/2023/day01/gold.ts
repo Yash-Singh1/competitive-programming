@@ -33,6 +33,7 @@ trimmed.split(DELIM).map((line) => {
     });
     if (made) break;
   }
+
   for (let i = line.length - 1; i >= 0; --i) {
     let made = false;
     nums.forEach((num, idx) => {

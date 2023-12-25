@@ -68,7 +68,7 @@ for (const card of cards) {
 }
 
 console.log(ans);
-fs.writeFileSync(
-  "out.txt",
-  fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
-);
+// fs.writeFileSync(
+//   "out.txt",
+//   fs.readFileSync("out.txt", "utf-8") + "\n" + ans + "\n"
+// );
