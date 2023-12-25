@@ -10,12 +10,14 @@
   },
   "scripts": {
     "perf": "bun run scripts/benchmark.ts",
-    "cache": "bun run scripts/cache.ts"
+    "cache": "bun run scripts/cache.ts",
+    "purge": "bun run scripts/purge.ts"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "markdown-table": "^3.0.3",
     "z3-solver": "^4.12.4"
   }
 }
