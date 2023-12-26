@@ -5,7 +5,7 @@ async function main() {
   const {
     Context, // High-level Z3Py-like API
   } = await init();
-  const { Solver, Int, And } = new Context("main");
+  const { Solver, Real } = new Context("main");
 
   const DELIM = "\n";
 
@@ -23,14 +23,14 @@ async function main() {
   });
 
   const [x, y, z, vx, vy, vz] = [
-    Int.const("x"),
-    Int.const("y"),
-    Int.const("z"),
-    Int.const("vx"),
-    Int.const("vy"),
-    Int.const("vz"),
+    Real.const("x"),
+    Real.const("y"),
+    Real.const("z"),
+    Real.const("vx"),
+    Real.const("vy"),
+    Real.const("vz"),
   ];
-  const t = hailstones.slice(0, 3).map((h, i) => Int.const(`t${i}`));
+  const t = hailstones.slice(0, 3).map((_, i) => Real.const(`t${i}`));
   const solver = new Solver();
 
   for (let i = 0; i < 3; ++i) {
@@ -47,7 +47,10 @@ async function main() {
 
   await solver.check();
 
-  ans = solver.model().eval(x.add(y.add(z))).toString();
+  ans =
+    Number(solver.model().eval(x)) +
+    Number(solver.model().eval(y)) +
+    Number(solver.model().eval(z));
 
   console.log(ans);
 

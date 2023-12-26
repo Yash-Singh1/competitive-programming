@@ -23,13 +23,13 @@ I decided to actually finish all the Advent of Code problems this year.
 | 14  | ![](https://placehold.co/10x10/b3ff00/000.png?text=%5Cn)27.471ms/![](https://placehold.co/10x10/ff6600/000.png?text=%5Cn)108.449ms  | --/-- |
 | 15  | ![](https://placehold.co/10x10/4dff00/000.png?text=%5Cn)22.125ms/![](https://placehold.co/10x10/ffe100/000.png?text=%5Cn)46.174ms   | --/-- |
 | 16  | ![](https://placehold.co/10x10/bfff00/000.png?text=%5Cn)29.99ms/![](https://placehold.co/10x10/ff3300/000.png?text=%5Cn)547.629ms   | --/-- |
-| 17  | ![](https://placehold.co/10x10/ff5100/000.png?text=%5Cn)217.967ms/![](https://placehold.co/10x10/ff0800/000.png?text=%5Cn)1564.75ms | --/-- |
-| 18  | ![](https://placehold.co/10x10/ff1e00/000.png?text=%5Cn)872.551ms/![](https://placehold.co/10x10/ff1100/000.png?text=%5Cn)893.387ms | --/-- |
+| 17  | ![](https://placehold.co/10x10/ff5100/000.png?text=%5Cn)217.967ms/![](https://placehold.co/10x10/ff0000/000.png?text=%5Cn)1564.75ms | --/-- |
+| 18  | ![](https://placehold.co/10x10/ff1100/000.png?text=%5Cn)872.551ms/![](https://placehold.co/10x10/ff0800/000.png?text=%5Cn)893.387ms | --/-- |
 | 19  | ![](https://placehold.co/10x10/d0ff00/000.png?text=%5Cn)35.174ms/![](https://placehold.co/10x10/ff8400/000.png?text=%5Cn)71.427ms   | --/-- |
 | 20  | ![](https://placehold.co/10x10/c8ff00/000.png?text=%5Cn)30.34ms/![](https://placehold.co/10x10/ff6f00/000.png?text=%5Cn)106.87ms    | --/-- |
 | 21  | ![](https://placehold.co/10x10/aaff00/000.png?text=%5Cn)27.233ms/![](https://placehold.co/10x10/ffee00/000.png?text=%5Cn)46.075ms   | --/-- |
 | 22  | ![](https://placehold.co/10x10/ff4800/000.png?text=%5Cn)254.29ms/![](https://placehold.co/10x10/ff3c00/000.png?text=%5Cn)388.171ms  | --/-- |
-| 23  | ![](https://placehold.co/10x10/fbff00/000.png?text=%5Cn)43.926ms/![](https://placehold.co/10x10/ff2600/000.png?text=%5Cn)748.15ms   | --/-- |
-| 24  | ![](https://placehold.co/10x10/9dff00/000.png?text=%5Cn)27.104ms/![](https://placehold.co/10x10/ff0000/000.png?text=%5Cn)8948.969ms | --/-- |
+| 23  | ![](https://placehold.co/10x10/fbff00/000.png?text=%5Cn)43.926ms/![](https://placehold.co/10x10/ff1e00/000.png?text=%5Cn)748.15ms   | --/-- |
+| 24  | ![](https://placehold.co/10x10/9dff00/000.png?text=%5Cn)27.104ms/![](https://placehold.co/10x10/ff2600/000.png?text=%5Cn)621.396ms  | --/-- |
 | 25  | ![](https://placehold.co/10x10/ff5d00/000.png?text=%5Cn)165.713ms/![](https://placehold.co/10x10/00ff00/000.png?text=%5Cn)9.958ms   | --/-- |
 <!-- BENCHMARK_END -->

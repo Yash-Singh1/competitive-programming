@@ -29,6 +29,8 @@ for i, line in enumerate(lines[:3]):
   ans.add(y + t[i] * vy == line[1]+t[i]*line[4])
   ans.add(z + t[i] * vz == line[2]+t[i]*line[5])
 
+print(ans.to_smt2())
+
 ans.check()
 print('checked')
 print(ans.model().eval(x+y+z))
