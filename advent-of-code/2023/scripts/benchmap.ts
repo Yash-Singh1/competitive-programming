@@ -19,6 +19,9 @@ const benchmap = {
   map: {
     12: {
       silver: "silverb.ts",
+      gold: "goldc.ts",
+    },
+    16: {
       gold: "goldb.ts",
     },
     20: {
@@ -29,6 +32,7 @@ const benchmap = {
       gold: "goldviz.ts",
     },
     23: {
+      silver: "silverb.ts",
       gold: "goldb.ts",
     },
     24: {
