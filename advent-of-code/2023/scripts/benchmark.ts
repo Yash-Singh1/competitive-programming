@@ -14,9 +14,12 @@ const hasher = new Bun.CryptoHasher("sha256");
 
 const BENCHMARK_START = "<!-- BENCHMARK_START -->";
 const BENCHMARK_END = "<!-- BENCHMARK_END -->";
-const tableHeaders = ["Day", "TypeScript", "Rust"];
+const tableHeaders = ["Day", "TypeScript Part 1", "TypeScript Part 2", "Rust"];
 const padLeft = Intl.NumberFormat("en-US", {
   minimumIntegerDigits: 2,
+});
+const padRight = Intl.NumberFormat("en-US", {
+  minimumFractionDigits: 3,
 });
 
 async function cacheAllResults(benches: Record<string, Result>) {
@@ -199,26 +202,30 @@ async function runAll() {
     const dayStr = padLeft.format(i);
     table.push([
       i.toString(),
-      [
+      ...[
         typeof final?.[`${dayStr}/1`] === "string"
-          ? final?.[`${dayStr}/1`]
+          ? (final?.[`${dayStr}/1`] as string)
           : final?.[`${dayStr}/1`]
           ? `![](https://placehold.co/10x10/${hslToHex(
               ...getColor(
                 problemToRank.get(`${dayStr}/1`) / (overallTimes.length - 1)
               )
-            )}/000.png?text=%5Cn)${final?.[`${dayStr}/1`]}ms`
+            )}/000.png?text=%5Cn)${padRight.format(
+              final[`${dayStr}/1`] as number
+            )}ms`
           : "--",
         typeof final?.[`${dayStr}/2`] === "string"
-          ? final?.[`${dayStr}/2`]
+          ? (final?.[`${dayStr}/2`] as string)
           : final?.[`${dayStr}/2`]
           ? `![](https://placehold.co/10x10/${hslToHex(
               ...getColor(
                 problemToRank.get(`${dayStr}/2`) / (overallTimes.length - 1)
               )
-            )}/000.png?text=%5Cn)${final?.[`${dayStr}/2`]}ms`
+            )}/000.png?text=%5Cn)${padRight.format(
+              final[`${dayStr}/2`] as number
+            )}ms`
           : "--",
-      ].join("/"),
+      ],
       "--/--",
     ]);
   }
