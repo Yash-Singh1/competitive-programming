@@ -6,11 +6,11 @@ const text = (await fs.readFileSync("./input.txt", "utf-8")).trim();
 
 let target = 0;
 
-const gridOG = text.split("\n").map((s) => s.trim().split(""));
+const grid = text.split("\n").map((s) => s.trim().split(""));
 const guardPosOG = [0, 0];
-for (let i = 0; i < gridOG.length; i++) {
-  for (let j = 0; j < gridOG[i].length; j++) {
-    if (gridOG[i][j] === "^") {
+for (let i = 0; i < grid.length; i++) {
+  for (let j = 0; j < grid[i].length; j++) {
+    if (grid[i][j] === "^") {
       guardPosOG[0] = i;
       guardPosOG[1] = j;
     }
@@ -22,9 +22,7 @@ const my = [-1, 0, 1, 0];
 
 function runThrough(pos: [number, number]) {
   let guardPos = [...guardPosOG];
-  let grid = [...gridOG.map((s) => [...s])];
   const visited = new Set<string>();
-  if (pos[0] >= 0) grid[pos[0]][pos[1]] = "#";
   let direction = 0;
 
   while (!visited.has([...guardPos, direction].join(","))) {
@@ -39,12 +37,11 @@ function runThrough(pos: [number, number]) {
       if (pos[0] < 0) return visited;
       return false;
     }
-    while (grid[nextPos[0]][nextPos[1]] === "#") {
+    if (grid[nextPos[0]][nextPos[1]] === "#") {
       direction = (direction + 1) % 4;
-      nextPos = [guardPos[0] + my[direction], guardPos[1] + mx[direction]];
+    } else {
+      guardPos = [guardPos[0] + my[direction], guardPos[1] + mx[direction]];
     }
-    guardPos[0] = nextPos[0];
-    guardPos[1] = nextPos[1];
   }
 
   return true;
@@ -52,13 +49,16 @@ function runThrough(pos: [number, number]) {
 
 const visitedFirst = runThrough([-1, 0]) as Set<string>;
 
-for (let i = 0; i < gridOG.length; i++) {
-  for (let j = 0; j < gridOG[i].length; j++) {
-    console.log(i, j);
+for (let i = 0; i < grid.length; i++) {
+  for (let j = 0; j < grid[i].length; j++) {
     if (
-      [0, 1, 2, 3].findIndex((d) => visitedFirst.has([i, j, d].join(","))) >= 0
+      [0, 1, 2, 3].findIndex((d) => visitedFirst.has([i, j, d].join(","))) >=
+        0 &&
+      (i !== guardPosOG[0] || j !== guardPosOG[1])
     ) {
+      grid[i][j] = "#";
       if (runThrough([i, j])) target++;
+      grid[i][j] = ".";
     }
   }
 }
